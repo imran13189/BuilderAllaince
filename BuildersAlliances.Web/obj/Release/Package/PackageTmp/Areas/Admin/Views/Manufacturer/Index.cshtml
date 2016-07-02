@@ -1,0 +1,90 @@
+﻿
+<script src="~/Scripts/Custom/Manufacturer.js"></script>
+
+<div id="searchManufaturer" style="display:none">
+    @Html.Partial("Search")
+</div>
+
+<div id="addManufaturer" style="display:none">
+    @Html.Partial("AddManufacturer")
+</div>
+<div class="row">
+    <div class="col-sm-12">
+        <section class="panel">
+            <header class="panel-heading">
+                Manufacturer
+            </header>
+            <div class="panel-body">
+                <div class="row">
+                   
+
+                   
+
+                    <div class="col-lg-2">
+                        <button class="btn btn-primary" id="btnAdvanceSearch" >Search Manufacturer</button>
+                    </div>
+
+                    <div class="col-lg-2 pull-right">
+
+                        <input type="button" id="btnAdd" class="btn btn-info" value="Add Manufacturer">
+                    </div>
+
+                </div>
+
+
+                <table class="table table-hover" data-sort-name="ManufacturerId" data-show-columns="true" data-show-filter="true" data-click-to-select="true"
+                       id="grid">
+                    <thead>
+
+                    </thead>
+                </table>
+            </div>
+        </section>
+    </div>
+</div>
+
+
+
+<div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1"  class="modal fade DiscountType">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+                <h4 class="modal-title">Discount Type</h4>
+            </div>
+
+            <div class="modal-body" id="DiscountType">
+
+            </div>
+           
+        </div>
+    </div>
+</div>
+
+<div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" class="modal fade Contact">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+                <h4 class="modal-title">Contacts</h4>
+            </div>
+
+            <div class="modal-body" id="Contact">
+                
+            </div>
+
+           
+        </div>
+    </div>
+</div>
+
+<div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" class="modal fade popModal">
+    <div class="modal-dialog">
+        <div class="modal-content" id="popModal">
+           
+
+           
+
+        </div>
+    </div>
+</div>

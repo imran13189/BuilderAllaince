@@ -1,0 +1,37 @@
+﻿@model BuildersAlliances.Domain.Inventory
+@{
+    ViewBag.Title = "_AddQuantity";
+}
+
+
+
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+            <h4 class="modal-title">Add Quantity</h4>
+        </div>
+        <div class="modal-body">
+           @using (Ajax.BeginForm("AddQuantity", "Inventory", new AjaxOptions { HttpMethod = "POST", OnSuccess = "AddInventorySuccess" }, new { @class = "form-horizontal", @id = "signupaForm" }))
+           {
+                <div class="form-group">
+                    <label for="Quantity">Quantity</label>
+                    @*<input type="email" class="form-control" id="exampleInputEmail3" placeholder="Enter email">*@
+                    @Html.TextBoxFor(m => m.Quantity, new { @class = "form-control", placeholder = "Quantity" })
+                    @Html.ValidationMessageFor(m=>m.Quantity )
+                </div>
+                <div class="form-group">
+                    <label for="PurchaseDate">Purchase Date</label>
+                    @Html.TextBoxFor(m => m.PurchaseDate,new {@Value=DateTime.Now.ToShortDateString(), @class = "form-control", placeholder = "Purchase Date" })
+                </div>
+                <div class="form-group">
+                    <label for="Comments">Comments</label>
+                    @Html.TextBoxFor(m => m.Comments, new { @class = "form-control", placeholder = "Comments" })
+                </div>
+                    @Html.HiddenFor(m=>m.ItemId)
+                    <button type="submit" id="btnAdd"  class="btn btn-default">Add</button>
+           }
+            </div>
+        </div>
+    </div>
+

@@ -1,0 +1,8 @@
+D:\Projects\BuildersAlliances\BuildersAlliances.Entities\bin\Release\BuildersAlliances.Entities.dll
+D:\Projects\BuildersAlliances\BuildersAlliances.Entities\bin\Release\BuildersAlliances.Entities.pdb
+D:\Projects\BuildersAlliances\BuildersAlliances.Entities\obj\Release\BuildersAlliances.Entities.dll
+D:\Projects\BuildersAlliances\BuildersAlliances.Entities\obj\Release\BuildersAlliances.Entities.pdb
+E:\Projects\BuildersAlliances\BuildersAlliances.Entities\bin\Release\BuildersAlliances.Entities.dll
+E:\Projects\BuildersAlliances\BuildersAlliances.Entities\bin\Release\BuildersAlliances.Entities.pdb
+E:\Projects\BuildersAlliances\BuildersAlliances.Entities\obj\Release\BuildersAlliances.Entities.dll
+E:\Projects\BuildersAlliances\BuildersAlliances.Entities\obj\Release\BuildersAlliances.Entities.pdb

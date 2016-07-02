@@ -1,0 +1,93 @@
+﻿@model BuildersAlliances.Domain.Trucks
+
+
+@{
+    ViewBag.Title = "AddManufaturer";
+    Layout = null;
+}
+
+<div class="row">
+    <div class="col-lg-12">
+        <section class="panel">
+            <header class="panel-heading">
+             Add Truck
+            </header>
+            <div class="panel-body">
+             
+                    @using (Ajax.BeginForm("AddTruck", "Truck", new AjaxOptions { HttpMethod = "POST", OnSuccess = "AddSuccess", OnBegin = "ShowLoader" }, new { @class = "form-horizontal", @id = "signupaForm" }))
+                    {
+                        <div class="row">
+                            <div class="col-md-4">
+                            <label  >Truck Number</label>
+                          </div>
+
+                            <div class="col-md-4">
+                                <label>Driver Assigned</label>
+                                </div>
+
+                            <div class="col-md-4">
+                                <label>Capacity</label>
+                            </div>
+                            <div>
+                                
+                            </div>
+                         </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                @Html.TextBoxFor(m => m.TruckNumber, new { @class = "form-control col-md-4", placeholder = "Truck Number" })
+                                @Html.ValidationMessageFor(m => m.TruckNumber, "", new { @class="error" })
+                             </div>
+                            <div class="col-md-4">
+                                @Html.TextBoxFor(m => m.DriverAssigned, new { @class = "form-control col-md-4", placeholder = "Driver Assigned" })
+                                @Html.ValidationMessageFor(m => m.DriverAssigned, "", new { @class = "error" })
+                            </div>
+                            <div class="col-md-4">
+                                @Html.TextBoxFor(m => m.Capacity, new { @class = "form-control col-md-4", placeholder = "Capacity" })
+                                @Html.ValidationMessageFor(m => m.Capacity, "", new { @class = "error" })
+                            </div>
+
+                               
+                            </div>
+
+
+
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label>Truck Type</label>
+                                </div>
+                                <div class="col-md-4 Manufacturer">
+                                    <label>Manufacturer</label>
+                                </div>
+                               
+                                <div>
+
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    @Html.DropDownListFor(m=>m.TruckTypeId, new SelectList((IEnumerable<BuildersAlliances.Domain.TruckType>)ViewBag.TruckType, "TruckTypeId", "TruckTypeName"), "--Select--", new { @class = "form-control col-md-4" })
+                                    @Html.ValidationMessageFor(m => m.TruckTypeId, "", new { @class = "error" })
+                                </div>
+                                <div class="col-md-4 Manufacturer" style="display:none;">
+                                    @Html.DropDownListFor(m => m.ManufacturerId, new SelectList((IEnumerable<BuildersAlliances.Domain.Manufacturer>)ViewBag.ManufacturerList, "ManufacturerId", "ManufacturerName"), "--Select--", new { @class = "form-control col-md-4", data_live_search = "true" })
+                                    @Html.ValidationMessageFor(m => m.ManufacturerId, "", new { @class = "error" })
+                                </div>
+                                </div>
+
+
+
+                            <div class="row top-menu" >
+                                <div class="pull-right btnsetting">
+                                         <button type="submit" id="btnSave" class="btn btn-info">Save</button>
+                                    <button type="button" onclick="Close();" class="btn btn-cancel">Cancel</button>
+                                    </div>
+                                </div>
+                                
+                                @Html.HiddenFor(model=>model.TruckId)
+                    }
+                
+            </div>
+        </section>
+    </div>
+</div>
+

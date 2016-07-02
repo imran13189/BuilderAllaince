@@ -1,0 +1,76 @@
+﻿<script>
+    /*-----------------------------Manufacturer---------------------------------*/
+    $_EditManufacturer = "@Url.Action("EditManufacturer", "Manufacturer",new  { Area="Admin"})";
+    $_AddManufacturer = "@Url.Action("AddManufacturer", "Manufacturer",new { Area = "Admin" })";
+    $_DeleteManufacturer = "@Url.Action("DeleteManufacturer", "Manufacturer", new { Area = "Admin" })";
+
+    $_ManufacturerList = "@Url.HttpRouteUrl("DefaultApi", new { controller="ManufacturerAPI",action= "GetManufacturer" })"
+    $_DiscountType = "@Url.HttpRouteUrl("DefaultApi", new { controller= "ManufacturerAPI", action= "GetDiscountType" })"
+    $_GetColor = "@Url.HttpRouteUrl("DefaultApi", new { controller= "ManufacturerAPI", action= "GetColors" })"
+    $_GetDoorsStyle = "@Url.HttpRouteUrl("DefaultApi", new { controller= "ManufacturerAPI", action= "GetDoor" })"
+
+    $_AddDiscount = "@Url.Action("GetDiscountType", "Manufacturer",new { Area = "Admin" })";
+    $_DeleteDiscountType = "@Url.Action("DeleteDiscountType", "Manufacturer", new { Area = "Admin" })";
+    $_EditDiscountType = "@Url.Action("EditDiscountType", "Manufacturer",new  { Area="Admin"})";
+    $_GetContacts = "@Url.Action("GetContacts", "Manufacturer",new  { Area="Admin"})";
+    $_GetDiscountType = "@Url.Action("DiscountType", "Manufacturer",new  { Area="Admin"})";
+    $_GetColors = "@Url.Action("GetColors", "Manufacturer",new  { Area="Admin"})";
+    $_GetDoorStyle = "@Url.Action("GetDoor", "Manufacturer",new  { Area="Admin"})";
+
+    $_EditColors = "@Url.Action("EditColor", "Manufacturer",new  { Area="Admin"})";
+    $_EditDoor = "@Url.Action("EditDoor", "Manufacturer",new  { Area="Admin"})";
+    $_DeleteColor = "@Url.Action("DeleteColor", "Manufacturer",new  { Area="Admin"})";
+    $_DeleteDoor = "@Url.Action("DeleteDoor", "Manufacturer",new  { Area="Admin"})";
+
+
+
+
+    /*-----------------------------Items---------------------------------*/
+    $_EditItem = "@Url.Action("EditItem", "Item",new  { Area="Admin"})";
+    $_AddManufacturer = "@Url.Action("AddItem", "Manufacturer")";
+    $_ItemList = "@Url.HttpRouteUrl("DefaultApi", new { controller="ItemAPI",action= "GetItem" })"
+    $_DeleteItem = "@Url.Action("DeleteItem", "Item", new { Area = "Admin" })";
+
+    /*--------------Inventory--------------*/
+    $_AddQuantity = "@Url.Action("AddQuantity", "Inventory", new  { Area="Admin"})";
+    $_RemoveQuantity = "@Url.Action("RemoveQuantity", "Inventory", new {Area="Admin"})";
+    $_InventioryItemList = "@Url.HttpRouteUrl("DefaultApi", new { controller= "InventoryAPI", action= "GetItem" })"
+    $_InventioryHistoryList = "@Url.HttpRouteUrl("DefaultApi", new { controller= "InventoryAPI", action= "GetInventoryHistory" })"
+    $_GetInventoryHistory = "@Url.Action("GetInventoryHistory", "Inventory", new {Area="Admin"})";
+    $_ItemDetails = "@Url.Action("ItemDetails", "Inventory", new {Area="Admin"})";
+    $_GetColorAndDoorStyle = "@Url.Action("GetColorAndDoorStyle", "Item", new {Area="Admin"})";
+
+
+    /*-----------------------------Order---------------------------------*/
+    $_EditOrder = "@Url.Action("EditOrder", "Orders", new  { Area="Order"})";
+   // $_AddManufacturer = "@Url.Action("AddOrder", "Order")";
+    $_OrderList = "@Url.HttpRouteUrl("DefaultApi", new { controller="OrderAPI",action= "GetOrder" })"
+    $_DeleteOrder = "@Url.Action("DeleteOrder", "Orders", new { Area = "Order" })";
+    $_GetItemByManufacturer = "@Url.HttpRouteUrl("DefaultApi", new { controller="OrderAPI",action= "GetItemByManufacturer" })"
+
+    $_EditOrderItem = "@Url.Action("EditOrderItem", "Orders", new  { Area="Order"})";
+    // $_AddManufacturer = "@Url.Action("AddOrder", "Order")";
+    $_OrderItem = "@Url.HttpRouteUrl("DefaultApi", new { controller="OrderAPI",action= "GetOrderItem" })"
+    $_DeleteOrderItem = "@Url.Action("DeleteOrderItem", "Orders", new { Area = "Order" })";
+    $_GetOrderItem = "@Url.Action("OrderItem", "Orders", new { Area = "Order" })";
+    $_GetManufacturerDiscount = "@Url.Action("GetManufacturer", "Orders", new { Area = "Order" })";
+    $_SaveDiscountType = "@Url.Action("SaveDiscountType", "Orders", new { Area = "Order" })";
+    $_ItemStatusList = "@Url.Action("GetItemStatusList", "Orders", new { Area = "Order" })";
+    $_DeleteOrderItems = "@Url.Action("DeleteItemOrder", "Orders", new { Area = "Order" })";
+    $_ChangeOrderItemStatus = "@Url.Action("ChangeOrderItemStatus", "Orders", new { Area = "Order" })";
+
+
+
+    /*-----------------------------Manufacturer---------------------------------*/
+    $_EditTruck = "@Url.Action("EditTruck", "Truck",new  { Area="Admin"})";
+    $_AddTrukc = "@Url.Action("AddManufacturersdfsdsg", "Manufacturer",new { Area = "Admin" })";
+    $_DeleteTruck = "@Url.Action("DeleteTruck", "Truck", new { Area = "Admin" })";
+    $_TruckList = "@Url.HttpRouteUrl("DefaultApi", new { controller="TruckAPI",action= "GetTrucks" })"
+
+
+    /*-----------------------------LogInfo---------------------------------*/
+
+    $_LogInfoList = "@Url.HttpRouteUrl("DefaultApi", new { controller="LogsAPI",action= "GetLogInfo" })"
+
+
+</script>

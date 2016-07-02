@@ -1,0 +1,48 @@
+﻿<script src="~/Scripts/Custom/Item.js"></script>
+
+<div id="itemSearch" style="display:none">
+    @Html.Partial("Search")
+</div>
+
+<div id="addItem" style="display:none">
+    @Html.Action("AddItem")
+</div>
+<div class="row">
+    <div class="col-sm-12">
+        <section class="panel">
+            <header class="panel-heading">
+                Items
+            </header>
+            <div class="panel-body">
+
+                <div class="row">
+                 
+                    <div class="col-lg-2">
+                        <button class="btn btn-primary" id="btnAdvanceSearch" >Search Item</button>
+                    </div>
+
+                    <div class="col-lg-2 pull-right">
+
+                        <input type="button" id="btnAdd" class="btn btn-info" value="Add Item">
+                    </div>
+
+                </div>
+
+                <table class="table table-hover" data-sort-name="ItemId" data-show-columns="true" data-show-filter="true" data-click-to-select="true"
+                       id="grid">
+                    <thead>
+
+                    </thead>
+                </table>
+
+            </div>
+        </section>
+    </div>
+</div>
+
+<div id="modalManufacture"  aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1"  class="modal fade">
+    @Html.Partial("_ManufacturerList")
+</div>
+
+
+

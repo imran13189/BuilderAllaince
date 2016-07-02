@@ -1,0 +1,10 @@
+D:\Projects\BuildersAlliances\BuildersAlliances.Utilities\bin\Release\BuildersAlliances.Utilities.dll
+D:\Projects\BuildersAlliances\BuildersAlliances.Utilities\bin\Release\BuildersAlliances.Utilities.pdb
+D:\Projects\BuildersAlliances\BuildersAlliances.Utilities\obj\Release\BuildersAlliances.Utilities.csprojResolveAssemblyReference.cache
+D:\Projects\BuildersAlliances\BuildersAlliances.Utilities\obj\Release\BuildersAlliances.Utilities.dll
+D:\Projects\BuildersAlliances\BuildersAlliances.Utilities\obj\Release\BuildersAlliances.Utilities.pdb
+E:\Projects\BuildersAlliances\BuildersAlliances.Utilities\bin\Release\BuildersAlliances.Utilities.dll
+E:\Projects\BuildersAlliances\BuildersAlliances.Utilities\bin\Release\BuildersAlliances.Utilities.pdb
+E:\Projects\BuildersAlliances\BuildersAlliances.Utilities\obj\Release\BuildersAlliances.Utilities.dll
+E:\Projects\BuildersAlliances\BuildersAlliances.Utilities\obj\Release\BuildersAlliances.Utilities.pdb
+E:\Projects\BuildersAlliances\BuildersAlliances.Utilities\obj\Release\BuildersAlliances.Utilities.csprojResolveAssemblyReference.cache

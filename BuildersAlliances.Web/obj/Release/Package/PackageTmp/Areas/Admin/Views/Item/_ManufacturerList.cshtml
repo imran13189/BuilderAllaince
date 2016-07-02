@@ -1,0 +1,61 @@
+﻿
+<script src="~/Scripts/Custom/ManufacturerList.js"></script>
+
+<div class="modal-dialog" style="width:60%">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+            <h4 class="modal-title">Select Manufacturer</h4>
+        </div>
+        <div class="modal-body">
+            <div class="row">
+                <div class="col-sm-12">
+                    <section class="panel">
+                        <header class="panel-heading">
+                            Manufacturer
+                        </header>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-lg-3">
+
+                                    <input class="form-control FilterManufacturer" id="txtManufacturerListName" placeholder="Manufacturer" type="text" name="FilterSearch">
+
+                                </div>
+
+                                <div id="advanceSearch" class="col-lg-8">
+                                    <div class="col-lg-3">
+                                        <input class="form-control FilterManufacturer" id="txtContactNumber" placeholder="Contact" type="text" name="FilterSearch">
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <input class="form-control FilterManufacturer" id="txtAddress" placeholder="Address" type="text" name="FilterSearch">
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <input class="form-control FilterManufacturer" id="txtEmailId" placeholder="Email" type="text" name="FilterSearch">
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <input class="form-control FilterManufacturer" id="txtWebSiteUrl" placeholder="WebSiteUrl" type="text" name="FilterSearch">
+                                    </div>
+                                </div>
+
+
+
+
+                            </div>
+
+
+                            <table class="table table-hover" data-sort-name="ManufacturerId" data-show-columns="true" data-show-filter="true" data-click-to-select="true"
+                                   id="gridManufacturer">
+                                <thead>
+
+                                </thead>
+                            </table>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+

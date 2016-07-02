@@ -1,0 +1,6 @@
+E:\Projects\BuildersAlliances\BuildersAlliances.API\bin\Debug\BuildersAlliances.API.dll.config
+E:\Projects\BuildersAlliances\BuildersAlliances.API\bin\Debug\BuildersAlliances.API.dll
+E:\Projects\BuildersAlliances\BuildersAlliances.API\bin\Debug\BuildersAlliances.API.pdb
+E:\Projects\BuildersAlliances\BuildersAlliances.API\obj\Debug\BuildersAlliances.API.dll
+E:\Projects\BuildersAlliances\BuildersAlliances.API\obj\Debug\BuildersAlliances.API.pdb
+E:\Projects\BuildersAlliances\BuildersAlliances.API\obj\Debug\BuildersAlliances.API.csprojResolveAssemblyReference.cache

@@ -1,0 +1,47 @@
+﻿
+<script src="~/Scripts/Custom/Truck.js"></script>
+
+<div id="searchTruck" style="display:none">
+    @Html.Partial("TruckSearch")
+</div>
+
+<div id="addTruck" style="display:none">
+    @Html.Partial("AddTruck")
+</div>
+<div class="row">
+    <div class="col-sm-12">
+        <section class="panel">
+            <header class="panel-heading">
+                Trucks
+            </header>
+            <div class="panel-body">
+                <div class="row">
+                    
+
+                    
+
+                    <div class="col-lg-2">
+                        <button class="btn btn-primary" id="btnAdvanceSearch" >Search Truck</button>
+                    </div>
+
+                    <div class="col-lg-2 pull-right">
+
+                        <input type="button" id="btnAdd" class="btn btn-info" value="Add Truck">
+                    </div>
+
+                </div>
+
+                <table class="table table-hover" data-show-columns="true" data-show-filter="true" data-click-to-select="true"
+                       id="grid">
+                    <thead>
+
+                    </thead>
+                </table>
+
+
+            </div>
+        </section>
+    </div>
+</div>
+
+

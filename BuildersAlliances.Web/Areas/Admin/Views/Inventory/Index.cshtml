@@ -1,0 +1,50 @@
+﻿<script src="~/Scripts/Masking.js"></script>
+<script src="~/Scripts/Custom/Inventory.js"></script>
+
+
+<div id="itemSearch" style="display:none">
+    @Html.Partial("Search")
+</div>
+
+<div class="row">
+    <div class="col-sm-12">
+        <section class="panel">
+            <header class="panel-heading">
+                Inventory
+            </header>
+            <div class="panel-body">
+                <div class="row">
+                   
+
+                    
+
+                    <div class="col-lg-2">
+                        <button class="btn btn-primary" id="btnAdvanceSearch" >Search Item</button>
+                    </div>
+
+
+                </div>
+
+                <table class="table table-hover" data-show-columns="true" data-show-filter="true" data-click-to-select="true"
+                       id="grid">
+                    <thead>
+
+                    </thead>
+                </table>
+            </div>
+        </section>
+    </div>
+</div>
+
+
+<div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal" class="modal fade">
+    @Html.Partial("_AddQuantity")
+</div>
+
+@*<div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal" class="modal fade">
+
+</div>*@
+
+<div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="InventoryHistory" class="modal fade">
+
+</div>

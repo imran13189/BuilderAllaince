@@ -1,0 +1,51 @@
+﻿@model BuildersAlliances.Domain.DiscountType
+
+@{ 
+
+    Layout = null;
+}
+
+<script src="~/Scripts/Custom/DiscountType.js"></script>
+
+
+
+<div id="editDiscount">
+@Html.Action("AddDiscountType", "Manufacturer", new { ManufacturerId =Model.ManufacturerId})   
+ </div>
+
+<div class="row">
+    <div class="col-sm-12">
+        <section class="panel">
+            <header class="panel-heading">
+                Discount
+            </header>
+            <div class="panel-body">
+                @*<div class="row">
+                    <div class="col-lg-2">
+
+                        <input class="form-control FilterSearch" id="txtManufacturerName" placeholder="Manufacturer" type="text" name="FilterSearch">
+                  
+                    </div>
+                    
+                    
+
+                  
+
+                 
+
+                </div>*@
+
+
+                <table class="table table-hover" data-show-columns="true" data-show-filter="true" data-click-to-select="true"
+                       id="discountgrid">
+                    <thead>
+
+                    </thead>
+                </table>
+            </div>
+        </section>
+    </div>
+</div>
+
+
+

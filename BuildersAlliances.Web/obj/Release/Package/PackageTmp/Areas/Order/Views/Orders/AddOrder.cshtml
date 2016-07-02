@@ -1,0 +1,71 @@
+﻿@model BuildersAlliances.Domain.Orders
+
+
+@{
+    ViewBag.Title = "AddManufaturer";
+    Layout = null;
+}
+
+<div class="row">
+    <div class="col-lg-12">
+        <section class="panel">
+            <header class="panel-heading">
+               Add Order
+            </header>
+            <div class="panel-body">
+             
+                    @using (Ajax.BeginForm("AddOrder", "Orders", new AjaxOptions { HttpMethod = "POST", OnSuccess = "AddSuccess", OnBegin = "ShowLoader" }, new { @class = "form-horizontal", @id = "signupaForm" }))
+                    {
+                        <div class="row">
+                           
+
+                            <div class="col-md-4">
+                                <label>Order Type</label>
+                            </div>
+                            <div>
+                                
+                            </div>
+                         </div>
+                        <div class="row">
+                            
+                            @*<div class="col-md-4">
+                                @Html.DropDownListFor(m => m.ManufacturerId,new SelectList((IEnumerable<BuildersAlliances.Domain.Manufacturer>)ViewBag.ManufacturerList,"ManufacturerId","ManufacturerName"),"--Select--" ,new { @class = "form-control col-md-4"})
+                                @Html.ValidationMessageFor(m => m.ManufacturerId, "", new { @class = "error" })
+                            </div>
+
+                            <div class="col-md-4">
+                                @*<select id="ItemId" class="form-control col-md-4 input-validation-error" data-val="true" data-val-number="The field ManufacturerId must be a number." data-val-required="The ManufacturerId field is required." ></select>
+                                <span class="error field-validation-error" data-valmsg-for="ManufacturerId" data-valmsg-replace="true"><span for="ManufacturerId" class="">The ManufacturerId field is required.</span></span>*@
+                                @*@Html.DropDownListFor(m=>m.ItemId,new SelectList(new List<string>()), "--Select--", new { @class = "form-control col-md-4" })
+                                @Html.ValidationMessageFor(m => m.ItemId, "", new { @class = "error" })
+
+    
+                            </div>*@
+
+                            <div class="col-md-4">
+                                @Html.DropDownListFor(m => m.OrderTypeId, new SelectList((IEnumerable<BuildersAlliances.Domain.OrderType>)ViewBag.OrderType, "OrderTypeId", "OrderTypeName"), "--Select--", new { @class = "form-control col-md-4" })
+                                @Html.ValidationMessageFor(m => m.OrderTypeId, "", new { @class = "error" })
+                            </div>
+
+
+                            </div>
+
+                   
+                    
+
+
+                            <div class="row">
+                                <div class="pull-right btnsetting">
+                                         <button type="submit" id="btnSave" class="btn btn-info">Save</button>
+                                    <button type="button" onclick="Close();" class="btn btn-cancel">Cancel</button>
+                                    </div>
+                                </div>
+
+                                @Html.HiddenFor(model=>model.OrderId)
+                    }
+                
+            </div>
+        </section>
+    </div>
+</div>
+

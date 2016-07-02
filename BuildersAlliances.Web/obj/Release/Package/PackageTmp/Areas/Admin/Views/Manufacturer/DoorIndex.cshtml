@@ -1,0 +1,58 @@
+﻿@model  BuildersAlliances.Domain.DoorStyle
+
+
+<script src="~/Scripts/Custom/DoorStyle.js"></script>
+@{ 
+    Layout = null;
+}
+
+
+
+
+
+    <div class="modal-header">
+        <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+        <h4 class="modal-title">Door Style</h4>
+    </div>
+
+<div class="modal-body">
+    <div id="addDoor" style="display:none">
+        @Html.Partial("AddDoorStyle", Model)
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <section class="panel">
+                <header class="panel-heading">
+                    Door Style
+                </header>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-lg-2">
+
+                            @*<input class="form-control FilterSearch" id="txtDoorStyle" placeholder="Door Style" type="text" name="FilterSearch">*@
+
+                        </div>
+
+
+
+                        <div class="col-lg-2 col-lg-offset-7">
+
+                            <input type="button" id="btnAddDoor" class="btn btn-info" value="Add Door Style">
+                        </div>
+
+                    </div>
+
+
+                    <table class="table table-hover" data-show-columns="true" data-show-filter="true" data-click-to-select="true"
+                           id="doorgrid">
+                        <thead>
+
+                        </thead>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </div>
+
+
+</div>

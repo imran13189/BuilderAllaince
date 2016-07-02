@@ -1,0 +1,10 @@
+D:\Projects\BuildersAlliances\BuildersAlliances.Entities\bin\Debug\BuildersAlliances.Entities.dll
+D:\Projects\BuildersAlliances\BuildersAlliances.Entities\bin\Debug\BuildersAlliances.Entities.pdb
+D:\Projects\BuildersAlliances\BuildersAlliances.Entities\obj\Debug\BuildersAlliances.Entities.dll
+D:\Projects\BuildersAlliances\BuildersAlliances.Entities\obj\Debug\BuildersAlliances.Entities.pdb
+D:\Projects\BuildersAlliances\BuildersAlliances.Entities\obj\Debug\BuildersAlliances.Entities.csprojResolveAssemblyReference.cache
+E:\Projects\BuildersAlliances\BuildersAlliances.Entities\bin\Debug\BuildersAlliances.Entities.dll
+E:\Projects\BuildersAlliances\BuildersAlliances.Entities\bin\Debug\BuildersAlliances.Entities.pdb
+E:\Projects\BuildersAlliances\BuildersAlliances.Entities\obj\Debug\BuildersAlliances.Entities.csprojResolveAssemblyReference.cache
+E:\Projects\BuildersAlliances\BuildersAlliances.Entities\obj\Debug\BuildersAlliances.Entities.dll
+E:\Projects\BuildersAlliances\BuildersAlliances.Entities\obj\Debug\BuildersAlliances.Entities.pdb

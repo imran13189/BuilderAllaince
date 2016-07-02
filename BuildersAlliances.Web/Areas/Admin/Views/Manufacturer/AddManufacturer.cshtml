@@ -1,0 +1,95 @@
+﻿@model BuildersAlliances.Domain.Manufacturer
+
+
+@{
+    ViewBag.Title = "AddManufaturer";
+    Layout = null;
+}
+
+<div class="row">
+    <div class="col-lg-12">
+        <section class="panel">
+            <header class="panel-heading">
+              Add  Manufacturer
+            </header>
+            <div class="panel-body">
+             
+                    @using (Ajax.BeginForm("AddManufacturer", "Manufacturer", new AjaxOptions { HttpMethod = "POST", OnSuccess = "AddSuccess", OnBegin = "ShowLoader" }, new { @class = "form-horizontal", @id = "signupaForm" }))
+                    {
+                        <div class="row">
+                            <div class="col-md-4">
+                            <label  >Manufacturer Name</label>
+                          </div>
+
+                            <div class="col-md-4">
+                                <label>Address</label>
+                                </div>
+
+                            <div class="col-md-4">
+                                <label>Contact</label>
+                            </div>
+                            <div>
+                                
+                            </div>
+                         </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                @Html.TextBoxFor(m => m.ManufacturerName, new { @class = "form-control col-md-4", placeholder = "Manufacturer Name" })
+                                @Html.ValidationMessageFor(m => m.ManufacturerName, "", new { @class="error" })
+                             </div>
+                            <div class="col-md-4">
+                                @Html.TextBoxFor(m => m.Address, new { @class = "form-control col-md-4", placeholder = "Address" })
+                                @Html.ValidationMessageFor(m => m.Address, "", new { @class = "error" })
+                            </div>
+                            <div class="col-md-4">
+                                @Html.TextBoxFor(m => m.ContactNumber, new { @class = "form-control col-md-4", placeholder = "Contact Number" })
+                                @Html.ValidationMessageFor(m => m.ContactNumber, "", new { @class = "error" })
+                            </div>
+
+                               
+                            </div>
+
+                        <div class="row">
+                                <div class="col-md-4">
+                                    <label>Email</label>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label>Web site url</label>
+                                </div>
+
+                                
+                                <div>
+
+                                </div>
+                            </div>
+                        <div class="row">
+                                <div class="col-md-4">
+                                    @Html.TextBoxFor(m => m.EmailId, new { @class = "form-control col-md-4", placeholder = "Email" })
+                                    @Html.ValidationMessageFor(m => m.EmailId, "", new { @class = "error" })
+                                </div>
+                                <div class="col-md-4">
+                                    @Html.TextBoxFor(m => m.WebSiteUrl, new { @class = "form-control col-md-4", placeholder = "WebSiteUrl" })
+                                </div>
+                                
+
+
+                            </div>
+
+                  
+
+                            <div class="row">
+                                <div class="pull-right btnsetting">
+                                         <button type="submit" id="btnSave" class="btn btn-info">Save</button>
+                                    <button type="button" onclick="Close();" class="btn btn-cancel">Cancel</button>
+                                    </div>
+                                </div>
+
+                                @Html.HiddenFor(model=>model.ManufacturerId)
+                    }
+                
+            </div>
+        </section>
+    </div>
+</div>
+

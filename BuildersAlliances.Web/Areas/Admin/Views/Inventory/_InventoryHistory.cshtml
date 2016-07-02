@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "_InventoryHistory";
+    Layout = null;
+}
+<script>
+    $_ItemId='@ViewBag.ItemId'
+    </script>
+@Html.Hidden("ItemId",(int)ViewBag.ItemId)
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+            <h4 class="modal-title">Quantity History</h4>
+        </div>
+        <div class="modal-body">
+
+            <div id="customtoolbar" class="form-inline">
+                <div class="form-group">
+
+                    <input class="form-control search" id="FilterQtySearch" placeholder="Search" type="text" name="FilterQtySearch">
+                </div>
+
+
+
+
+
+            </div>
+
+            <table class="table table-hover" data-show-columns="true" data-show-filter="true" data-click-to-select="true"
+                   id="gridInventoryHistory">
+                <thead>
+
+                </thead>
+            </table>
+        </div>
+    </div>
+</div>
+<script src="~/Scripts/Custom/InventoryHistory.js"></script>

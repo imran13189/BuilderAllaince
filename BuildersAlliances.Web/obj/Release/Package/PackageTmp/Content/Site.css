@@ -1,0 +1,27 @@
+﻿.field-validation-error{
+    color: #a94442;
+}
+
+
+.btnsetting{
+    margin-top:10px;
+    margin-right:14px;
+}
+
+.hide{
+    display:none;
+}
+
+ .advanceSearch
+    {
+    display:none;
+    }
+
+
+ .danger-not{
+   background-color:  #f2dede;
+ }
+
+ .success-not{
+   background-color:  #dff0d8;
+ }

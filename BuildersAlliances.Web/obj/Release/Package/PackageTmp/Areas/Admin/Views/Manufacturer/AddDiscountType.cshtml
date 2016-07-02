@@ -1,0 +1,74 @@
+﻿@model BuildersAlliances.Domain.DiscountType
+
+
+@{
+    ViewBag.Title = "AddManufaturer";
+    Layout = null;
+}
+
+
+
+<div class="row">
+    <div class="col-lg-12">
+        <section class="panel">
+            <header class="panel-heading">
+              Add  Discount
+            </header>
+            <div class="panel-body">
+             
+                    @using (Ajax.BeginForm("AddDiscountType", "Manufacturer", new AjaxOptions { HttpMethod = "POST", OnSuccess = "AddDiscountSuccess", OnBegin = "ShowLoader" }, new { @class = "form-horizontal", @id = "dicountForm" }))
+                    {
+                        <div class="row">
+                            <div class="col-md-4">
+                            <label>Discount Type</label>
+                          </div>
+
+                            <div class="col-md-4">
+                                <label>Multiplier</label>
+                                </div>
+
+                            <div class="col-md-4">
+                                <label></label>
+                            </div>
+                            <div>
+
+
+                                
+                            </div>
+                         </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                @Html.TextBoxFor(m => m.DiscountTypeName, new { @class = "form-control col-md-4", placeholder = "Discount Type" })
+                                @Html.ValidationMessageFor(m => m.DiscountTypeName, "", new { @class="error" })
+                             </div>
+                            <div class="col-md-4">
+                                @Html.TextBoxFor(m => m.Multiplier, new { @class = "form-control col-md-4", placeholder = "Multiplier" })
+                                @Html.ValidationMessageFor(m => m.Multiplier, "", new { @class = "error" })
+                            </div>
+                            <div class="col-md-4">
+                                <button type="submit" id="btnDiscount" class="btn btn-info">Save</button>
+                                </div>
+                            </div>
+
+                       
+                  
+
+                            @*<div class="row">
+                                <div class="pull-right btnsetting">
+                                         <button type="submit" id="btnSave" class="btn btn-info">Save</button>
+                                    <button type="button" onclick="Close();" class="btn btn-cancel">Cancel</button>
+                                    </div>
+                                </div>*@
+
+                        @Html.HiddenFor(model=>model.DiscountTypeId)
+                        @Html.HiddenFor(model => model.ManufacturerId,new {@class="ManufacturerId" })
+                    }
+                
+            </div>
+        </section>
+    </div>
+</div>
+
+
+
+

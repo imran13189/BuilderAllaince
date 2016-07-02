@@ -1,0 +1,42 @@
+﻿@model List<BuildersAlliances.CustomModel.NotificationModel>
+
+@{
+    Layout = null;
+}
+
+
+
+
+
+    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+        <i class="fa fa-bell-o"></i>
+        <span class="badge bg-important">@Model.Count</span>
+    </a>
+    <ul class="dropdown-menu extended tasks-bar">
+        <li>
+            <p>Notifications</p>
+        </li>
+        @foreach (var item in Model)
+        {
+          
+
+          <li>
+           
+                        <a href="#" class="danger-not" >
+                            <div class="task-info clearfix">
+                                <div class="desc pull-left">
+                                    <h5>Order number: @item.OrderId</h5>
+                                    <p>Truck @item.TruckNumber of @item.ManufacturerName Overloaded, @item.Dated</p>
+                                </div>
+                                @*<span class="notification-pie-chart pull-right" data-percent="45">
+                                    <span class="percent"></span>
+                                </span>*@
+                            </div>
+                        
+                        </a>
+                  
+          </li>
+    
+        
+        }
+    </ul>

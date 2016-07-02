@@ -1,0 +1,175 @@
+﻿@model BuildersAlliances.Domain.Items
+
+
+@{
+    ViewBag.Title = "AddManufaturer";
+    Layout = null;
+}
+<link href="~/Content/bootstrap-select.css" rel="stylesheet" />
+<script src="~/Scripts/bootstrap-select.js"></script>
+
+<script>
+    $(document).ready(function () {
+
+        $('#ManufacturerId').selectpicker({
+            style: 'btn-info',
+            size: 4
+        });
+
+        $("#advanceManu").click(function () {
+
+            $("#modalManufacture").modal('show');
+        });
+
+
+    });
+
+ </script>
+<div class="row">
+    <div class="col-lg-12">
+        <section class="panel">
+            <header class="panel-heading">
+               Add Item
+            </header>
+            <div class="panel-body">
+             
+                    @using (Ajax.BeginForm("AddItem", "Item", new AjaxOptions { HttpMethod = "POST", OnSuccess = "AddSuccess", OnBegin = "ShowLoader" }, new { @class = "form-horizontal", @id = "signupaForm" }))
+                    {
+                        <div class="row">
+                            <div class="col-md-4">
+                            <label  >Item Name</label>
+                          </div>
+
+                           
+
+
+
+                            <div class="col-md-4">
+                                <label>Item SKU</label>
+                            </div>
+
+
+                            <div class="col-md-4">
+                                <label>Cubes</label>
+                            </div>
+
+
+                            <div>
+                                
+                            </div>
+                         </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                @Html.TextBoxFor(m => m.ItemName, new { @class = "form-control col-md-4", placeholder = "Item Name" })
+                                @Html.ValidationMessageFor(m => m.ItemName, "", new { @class="error" })
+                             </div>
+                            <div class="col-md-4">
+                                @Html.TextBoxFor(m => m.ItemSKU, new { @class = "form-control col-md-4", placeholder = "SKU" })
+                            </div>
+                            
+                            <div class="col-md-4">
+                                @Html.TextBoxFor(m => m.Cubes, new { @class = "form-control col-md-4", placeholder = "Cubes" })
+                                @Html.ValidationMessageFor(m => m.Cubes, "", new { @class = "error" })
+                            </div>
+                         
+
+                               
+                            </div>
+
+
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label>Manufacturer</label>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label>Item Color</label>
+                                </div>
+                                <div class="col-md-4">
+                                    <label>Door</label>
+                                </div>
+                              
+
+                                <div>
+
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="row">
+                                        <div class="col-md-10">
+                                            @Html.DropDownListFor(m => m.ManufacturerId, new SelectList((IEnumerable<BuildersAlliances.Domain.Manufacturer>)ViewBag.ManufacturerList, "ManufacturerId", "ManufacturerName"), "--Select--", new { @class = "form-control col-md-4", data_live_search = "true" })
+                                            @Html.ValidationMessageFor(m => m.ManufacturerId, "", new { @class = "error" })
+                                        </div>
+                                        <div class="col-lg-1">
+                                            <span id="advanceManu" class="btn btn-xs btn-info">...</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-4">
+                                  
+                                  
+                                    <select id="ColorId" name="ColorId"  class="form-control"></select>
+                                    
+                                </div>
+
+                                <div class="col-md-4">
+                                  
+                                  
+                                    <select id="DoorStyleId" name="DoorStyleId"  class="form-control"></select>
+                                  
+                                </div>
+                                
+
+
+                            </div>
+
+
+
+                        <div class="row">
+                              
+
+                                <div class="col-md-4">
+                                    <label>List Price</label>
+                                </div>
+
+                        
+
+                                
+                                <div>
+
+                                </div>
+                            </div>
+                        <div class="row">
+                            
+                                <div class="col-md-4">
+                                    @Html.TextBoxFor(m => m.ListPrice, new { @class = "form-control col-md-4", placeholder = "List Price" })
+                                    @Html.ValidationMessageFor(m => m.ListPrice, "", new { @class = "error" })
+                                </div>
+                        
+                                
+
+
+                            </div>
+
+                            
+
+                            
+
+
+                            <div class="row">
+                                <div class="pull-right btnsetting">
+                                         <button type="submit" id="btnSave" class="btn btn-info">Save</button>
+                                    <button type="button" onclick="Close();" class="btn btn-cancel">Cancel</button>
+                                    </div>
+                                </div>
+
+                                @Html.HiddenFor(model=>model.ItemId)
+                    }
+                
+            </div>
+        </section>
+    </div>
+</div>
+

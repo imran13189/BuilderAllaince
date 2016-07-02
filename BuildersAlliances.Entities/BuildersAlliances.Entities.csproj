@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{926AA31E-3879-419F-A932-B4CF6073A39F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BuildersAlliances.Entities</RootNamespace>
+    <AssemblyName>BuildersAlliances.Entities</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="CustomModel\BuilderModel.cs" />
+    <Compile Include="CustomModel\ColorModel.cs" />
+    <Compile Include="CustomModel\DataObject.cs" />
+    <Compile Include="CustomModel\DiscountTypeModel.cs" />
+    <Compile Include="CustomModel\DoorStyleModel.cs" />
+    <Compile Include="CustomModel\InventoryModel.cs" />
+    <Compile Include="CustomModel\ItemDiscountModel.cs" />
+    <Compile Include="CustomModel\ItemModel.cs" />
+    <Compile Include="CustomModel\LoginModel.cs" />
+    <Compile Include="CustomModel\ManufacturerModel.cs" />
+    <Compile Include="CustomModel\NotificationModel.cs" />
+    <Compile Include="CustomModel\NotificationItem.cs" />
+    <Compile Include="CustomModel\OrderItemModel.cs" />
+    <Compile Include="CustomModel\OrderModel.cs" />
+    <Compile Include="CustomModel\RegisterModel.cs" />
+    <Compile Include="CustomModel\TruckModel.cs" />
+    <Compile Include="Domain\BaseEntity.cs" />
+    <Compile Include="Domain\Builder.cs" />
+    <Compile Include="Domain\Notification.cs" />
+    <Compile Include="Domain\OrderStatus.cs" />
+    <Compile Include="Domain\DoorStyle.cs" />
+    <Compile Include="Domain\Colors.cs" />
+    <Compile Include="Domain\DiscountType.cs" />
+    <Compile Include="Domain\Inventory.cs" />
+    <Compile Include="Domain\ItemDiscounts.cs" />
+    <Compile Include="Domain\Items.cs" />
+    <Compile Include="Domain\ItemStatus.cs" />
+    <Compile Include="Domain\Log.cs" />
+    <Compile Include="Domain\LogInfo.cs" />
+    <Compile Include="Domain\LogProperty.cs" />
+    <Compile Include="Domain\LogPropertyChange.cs" />
+    <Compile Include="Domain\LogType.cs" />
+    <Compile Include="Domain\Manufacturer.cs" />
+    <Compile Include="Domain\OrderItem.cs" />
+    <Compile Include="Domain\OrderType.cs" />
+    <Compile Include="Domain\Orders.cs" />
+    <Compile Include="Domain\Trucks.cs" />
+    <Compile Include="Domain\TruckType.cs" />
+    <Compile Include="Domain\Users.cs" />
+    <Compile Include="Enums\ItemStatus.cs" />
+    <Compile Include="Helper\LogHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

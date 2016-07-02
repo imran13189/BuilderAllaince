@@ -1,0 +1,38 @@
+﻿
+
+@{
+    Layout = null;
+}
+<script src="~/Scripts/Custom/ItemStatus.js"></script>
+
+<div class="row">
+    <div class="col-sm-12">
+        <section class="panel">
+            <header class="panel-heading">
+                Order Items
+            </header>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-lg-2">
+
+                       <button class="btn btn-danger" onclick="DeleteOrder(@ViewBag.OrderId)">Delete Order</button>
+
+                    </div>
+                    </div>
+
+                    <table class="table table-hover" data-show-columns="true" data-show-filter="true" data-click-to-select="true"
+                           id="gridItemSatus">
+                        <thead>
+
+                        </thead>
+                    </table>
+
+
+
+                </div>
+        </section>
+    </div>
+</div>
+<input type="hidden" id="IdOrder" value="@ViewBag.OrderId" />
+
+

@@ -1,0 +1,59 @@
+﻿@model BuildersAlliances.Domain.Colors
+
+@{ 
+    Layout = null;
+}
+
+<script src="~/Scripts/Custom/Color.js"></script>
+
+
+
+
+    <div class="modal-header">
+        <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+        <h4 class="modal-title">Color</h4>
+    </div>
+<div class="modal-body">
+
+    <div id="addColor" style="display:none">
+        @Html.Partial("AddColor", Model)
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <section class="panel">
+                <header class="panel-heading">
+                    Color
+                </header>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-lg-2">
+
+                            @*<input class="form-control FilterSearch" id="txtColorName" placeholder="Color" type="text" name="FilterSearch">*@
+
+                        </div>
+
+
+
+                  
+
+                        <div class="col-lg-2 col-lg-offset-7">
+
+                            <input type="button" id="btnAddColor" class="btn btn-info" value="Add Color">
+                        </div>
+
+                    </div>
+
+
+                    <table class="table table-hover" data-show-columns="true" data-show-filter="true" data-click-to-select="true"
+                           id="colorgrid">
+                        <thead>
+
+                        </thead>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </div>
+
+
+</div>

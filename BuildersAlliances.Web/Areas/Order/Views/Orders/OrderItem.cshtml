@@ -1,0 +1,62 @@
+﻿@model BuildersAlliances.Domain.OrderItem
+
+@{
+    Layout = null;
+}
+<script src="~/Scripts/Custom/OrderItem.js"></script>
+<div id="addOrderItem" style="display:none">
+    @Html.Action("AddOrderItem", "Orders",new { OrderId=Model.OrderId })
+</div>
+<div class="row">
+    <div class="col-sm-12">
+        <section class="panel">
+            <header class="panel-heading">
+                Order Items
+            </header>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-lg-2">
+
+                        <input class="form-control FilterSearch1" id="txtItemSKU" placeholder="Item SKU" type="text" name="FilterSearch">
+
+                    </div>
+
+                    <div id="advanceSearch" class="col-lg-6 advanceSearch">
+                        <div class="col-lg-4">
+                            <input class="form-control FilterSearch1" id="txtManufacturer" placeholder="Manufacturer name" type="text" name="FilterSearch">
+                        </div>
+                        <div class="col-lg-4">
+                            <input class="form-control FilterSearch1" id="txtItemName" placeholder="Item Name" type="text" name="FilterSearch">
+                        </div>
+                      
+
+                    </div>
+
+                    <div class="col-lg-2">
+                        <span class="btn btn-sm" id="btnAdvanceSearch" onclick="ToggleSearch();">Advance search</span>
+                    </div>
+
+                    <div class="col-lg-2 pull-right">
+
+                        <input type="button" id="btnAddItem" class="btn btn-info" value="Add Item">
+                    </div>
+
+                </div>
+
+                <table class="table table-hover" data-show-columns="true" data-show-filter="true" data-click-to-select="true"
+                       id="gridItems">
+                    <thead>
+
+                    </thead>
+                </table>
+
+
+
+            </div>
+        </section>
+    </div>
+</div>
+
+
+
+

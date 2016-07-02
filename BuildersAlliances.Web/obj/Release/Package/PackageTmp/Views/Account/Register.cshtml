@@ -1,0 +1,108 @@
+﻿@model BookOcean.Domain.Entities.RegisterModel
+
+@{ 
+
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="ThemeBucket">
+    <link rel="shortcut icon" href="images/favicon.png">
+    <title>Login</title>
+    <!--Core CSS -->
+    <link href="~/Content/bs3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Content/css/bootstrap-reset.css" rel="stylesheet">
+    <link href="~/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <!-- Custom styles for this template -->
+    <link href="~/Content/css/style.css" rel="stylesheet">
+    <link href="~/Content/css/style-responsive.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-2.2.0.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]>
+    <script src="js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+
+
+    <![endif]-->
+
+    <script type="text/javascript" src="~/Scripts/js/jquery.validate.min.js"></script>
+    <script src="~/Scripts/Custom/Register.js"></script>
+
+</head>
+<body class="login-body">
+    <div class="container">
+        @using (Html.BeginForm("Register","Account",FormMethod.Post, new {@class="form-signin" ,@id= "signupForm" }))
+        {
+
+            <h2 class="form-signin-heading">registration now</h2>
+            <div class="login-wrap">
+                <p>Enter your personal details below</p>
+                @Html.TextBoxFor(m => m.CompanyName, new { @class="form-control", @placeholder="Full Name", @autofocus="true" })
+                @Html.ValidationMessageFor(m=>m.CompanyName)
+
+                @Html.TextBoxFor(m => m.Address, new { @class = "form-control", @placeholder = "Address", @autofocus = "true" })
+                @Html.TextBoxFor(m => m.Email, new { @class = "form-control", @placeholder = "Email", @autofocus = "true" })
+                @Html.TextBoxFor(m => m.StateId, new { @class = "form-control", @placeholder = "State", @autofocus = "true" })
+                @Html.TextBoxFor(m => m.CityId, new { @class = "form-control", @placeholder = "City", @autofocus = "true" })
+                @Html.PasswordFor(m => m.Password, new { @class = "form-control", @placeholder = "Password", @autofocus = "true" })
+                @Html.Password("ConfirmPassword","", new { @class = "form-control", @placeholder = "Retype Password", @autofocus = "true" })
+
+                <label class="checkbox">
+                    @Html.CheckBoxFor(m=>m.TermCondition, new { @value = "agree this condition" }) I agree to the Terms of Service and Privacy Policy
+                </label>
+                <button class="btn btn-lg btn-login btn-block" type="submit">Submit</button>
+
+
+
+
+
+
+
+
+                @*<input type="text" class="form-control" placeholder="Full Name" autofocus>
+                <input type="text" class="form-control" placeholder="Address" autofocus>
+                <input type="text" class="form-control" placeholder="Email" autofocus>
+                <input type="text" class="form-control" placeholder="City/Town" autofocus>
+                <div class="radios">
+                    <label class="label_radio col-lg-6 col-sm-6" for="radio-01">
+                        <input name="sample-radio" id="radio-01" value="1" type="radio" checked /> Male
+                    </label>
+                    <label class="label_radio col-lg-6 col-sm-6" for="radio-02">
+                        <input name="sample-radio" id="radio-02" value="1" type="radio" /> Female
+                    </label>
+                </div>
+                <p> Enter your account details below</p>
+                <input type="text" class="form-control" placeholder="User Name" autofocus>
+                <input type="password" class="form-control" placeholder="Password">
+                <input type="password" class="form-control" placeholder="Re-type Password">
+                <label class="checkbox">
+                    <input type="checkbox" value="agree this condition"> I agree to the Terms of Service and Privacy Policy
+                </label>
+                <button class="btn btn-lg btn-login btn-block" type="submit">Submit</button>*@
+                <div class="registration">
+                    Already Registered.
+                    <a class="" href="login.html">
+                        Login
+                    </a>
+                </div>
+            </div>
+        
+        }
+    </div>
+
+    <!-- Placed js at the end of the document so the pages load faster -->
+    <!--Core js-->
+    <script src="~/Scripts/js/jquery.js"></script>
+    <script src="~/Content/bs3/js/bootstrap.min.js"></script>
+</body>
+</html>

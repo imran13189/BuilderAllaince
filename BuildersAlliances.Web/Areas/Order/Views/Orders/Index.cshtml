@@ -1,0 +1,81 @@
+﻿<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script src="~/Scripts/Custom/Order.js"></script>
+<div id="addOrder" style="display:none">
+    @Html.Action("AddOrder", "Orders")
+</div>
+<div class="row">
+    <div class="col-sm-12">
+        <section class="panel">
+            <header class="panel-heading">
+                Orders
+            </header>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-lg-2">
+
+                        <input class="form-control FilterSearch" id="txtOrderId" placeholder="Order Number" type="text" name="FilterSearch">
+
+                    </div>
+
+                    
+
+                    
+                    <div class="col-lg-2 pull-right">
+
+                        <input type="button" id="btnAddOrder" class="btn btn-info" value="Add Order">
+                    </div>
+
+                </div>
+
+                <table class="table table-hover" data-show-columns="true" data-show-filter="true" data-click-to-select="true"
+                       id="grid">
+                    <thead>
+
+                    </thead>
+                </table>
+
+
+
+            </div>
+        </section>
+    </div>
+</div>
+
+
+
+<div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" class="modal fade OrderItem">
+    <div class="modal-dialog" style="width:80%">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+                <h4 class="modal-title">Add items</h4>
+            </div>
+            <div id="OrderItems">
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" class="modal fade Discount">
+    <div class="modal-dialog" style="width:70%">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+                <h4 class="modal-title">Add items</h4>
+            </div>
+
+        
+
+            <div id="Discount">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

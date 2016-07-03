@@ -8,3 +8,8 @@ E:\Projects\BuildersAlliances\BuildersAlliances.Entities\bin\Debug\BuildersAllia
 E:\Projects\BuildersAlliances\BuildersAlliances.Entities\obj\Debug\BuildersAlliances.Entities.csprojResolveAssemblyReference.cache
 E:\Projects\BuildersAlliances\BuildersAlliances.Entities\obj\Debug\BuildersAlliances.Entities.dll
 E:\Projects\BuildersAlliances\BuildersAlliances.Entities\obj\Debug\BuildersAlliances.Entities.pdb
+E:\Projects\BuilderAlliance\BuildersAlliances.Entities\bin\Debug\BuildersAlliances.Entities.dll
+E:\Projects\BuilderAlliance\BuildersAlliances.Entities\bin\Debug\BuildersAlliances.Entities.pdb
+E:\Projects\BuilderAlliance\BuildersAlliances.Entities\obj\Debug\BuildersAlliances.Entities.csprojResolveAssemblyReference.cache
+E:\Projects\BuilderAlliance\BuildersAlliances.Entities\obj\Debug\BuildersAlliances.Entities.dll
+E:\Projects\BuilderAlliance\BuildersAlliances.Entities\obj\Debug\BuildersAlliances.Entities.pdb

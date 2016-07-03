@@ -68,7 +68,7 @@ $(document).ready(function () {
                     $("#btnSave").html("Update");
                     
                     $("#addOrder").show();
-
+                    AutocompleteInit();
                     
                     
 
@@ -208,6 +208,15 @@ $(document).ready(function () {
                   type: 'search',
 
               }
+               ,
+
+                {
+                    field: 'BuilderName',
+                    title: 'Builder',
+                    checkbox: false,
+                    type: 'search',
+                    sortable: true,
+                }
              ,
 
                 {
@@ -362,7 +371,7 @@ function AutocompleteInit()
         select: function (event, ui) {
             if (ui.item.Id > 0) {
 
-                $("#ProductId").val(ui.item.Id);
+                $("#BuilderId").val(ui.item.Id);
 
             }
 

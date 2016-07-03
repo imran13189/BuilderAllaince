@@ -38,6 +38,7 @@ namespace BuildersAlliances.Services
 
                     data.OrderTypeId = model.OrderTypeId;
                     data.Installer = model.Installer;
+                    data.BuilderId = model.BuilderId;
                   //  data.OrderStatus = model.OrderStatus;
 
                 }

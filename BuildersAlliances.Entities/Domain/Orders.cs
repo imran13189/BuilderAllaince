@@ -28,5 +28,7 @@ namespace BuildersAlliances.Domain
         public bool IsDeleted { get; set; }
 
         public int BuilderId { get; set; }
+        [NotMapped]
+        public string BuilderName { get; set; }
     }
 }

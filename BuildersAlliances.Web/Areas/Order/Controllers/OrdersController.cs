@@ -33,7 +33,7 @@ namespace BuildersAlliances.Web.Areas.Order.Controllers
         {
             ViewBag.ManufacturerList = _manufacturer.GetManufacturer();
             ViewBag.OrderType = _order.GetOrderType();
-
+            ViewBag.BuilderName = "";
             return View(); 
         }
         [HttpPost]
@@ -48,6 +48,7 @@ namespace BuildersAlliances.Web.Areas.Order.Controllers
         {
             ViewBag.ManufacturerList = _manufacturer.GetManufacturer();
             ViewBag.OrderType = _order.GetOrderType();
+            ViewBag.BuilderName = model.BuilderName;
             return View("AddOrder", model);
         }
         

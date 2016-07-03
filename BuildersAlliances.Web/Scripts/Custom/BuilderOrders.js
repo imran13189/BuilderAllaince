@@ -23,8 +23,8 @@ $(document).ready(function () {
 
         return [
             
-             '<a id="addItem" class="addItem ml10 isAllowDelete" href="javascript:void(0)" title="Add Item(s) to Order">',
-                '<span class="btn btn-info btn-sm glyphicon glyphicon-plus"></span>',
+             '<a id="addItem" class="addItem ml10 isAllowDelete" href="javascript:void(0)" title="View Items">',
+                '<span class="btn btn-info btn-sm">View Items</span>',
             '</a>'
 
         ].join('');

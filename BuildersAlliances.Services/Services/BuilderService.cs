@@ -84,17 +84,23 @@ namespace BuildersAlliances.Services
 
       public  List<OrderModel> GetBuilderOrders(int limit, int offset, string order, string sort, OrderModel model)
         {
-            SqlParameter[] param = new SqlParameter[] {
+            try
+            {
+                SqlParameter[] param = new SqlParameter[] {
                          new SqlParameter("@offset", offset),
                          new SqlParameter("@limit", limit),
-                         new SqlParameter("@order", sort),
+                         new SqlParameter("@order", order),
                          new SqlParameter("@OrderId", model.OrderId),
                          new SqlParameter("@BuilderId",model.BuilderId),
                          //new SqlParameter("@ItemName", model.ItemName)
                          };
 
-            return uow.ExecuteProcedure<OrderModel>("exec GetBuildersOrders @offset, @limit, @order,@OrderId,@BuilderId", param);
+                return uow.ExecuteProcedure<OrderModel>("exec GetBuildersOrders @offset, @limit, @order,@OrderId,@BuilderId", param);
+            }
+            catch(Exception e) {
 
+                throw e;
+            }
         }
 
         public List<Builder> GetBuilder(string BuilderName)

@@ -22,5 +22,7 @@ namespace BuildersAlliances.CustomModel
         public int OrderTypeId { get; set; }
 
         public int BuilderId { get; set; }
+
+        public string BuilderName { get; set; }
     }
 }

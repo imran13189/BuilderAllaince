@@ -45,7 +45,7 @@
                             </div>*@
 
                             <div class="col-md-4">
-                                @Html.TextBox("SearchBuilder",  new { @class = "form-control col-md-4" })
+                                @Html.TextBox("SearchBuilder",(string)ViewBag.BuilderName, new { @class = "form-control col-md-4" })
                                 @Html.ValidationMessageFor(m => m.OrderTypeId, "", new { @class = "error" })
                             </div>
 

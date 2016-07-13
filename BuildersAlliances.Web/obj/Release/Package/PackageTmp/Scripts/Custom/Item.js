@@ -15,6 +15,7 @@ $(document).ready(function () {
         $("#ItemId").val('0');
         $("#btnSave").html("Add");
         ApplyValidation();
+        $('#ManufacturerId').selectpicker('refresh');
     });
 
 

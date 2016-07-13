@@ -61,7 +61,7 @@
 
 
 
-    /*-----------------------------Manufacturer---------------------------------*/
+    /*-----------------------------Truck---------------------------------*/
     $_EditTruck = "@Url.Action("EditTruck", "Truck",new  { Area="Admin"})";
     $_AddTrukc = "@Url.Action("AddManufacturersdfsdsg", "Manufacturer",new { Area = "Admin" })";
     $_DeleteTruck = "@Url.Action("DeleteTruck", "Truck", new { Area = "Admin" })";
@@ -71,6 +71,18 @@
     /*-----------------------------LogInfo---------------------------------*/
 
     $_LogInfoList = "@Url.HttpRouteUrl("DefaultApi", new { controller="LogsAPI",action= "GetLogInfo" })"
+
+
+    /*-----------------------------Builder---------------------------------*/
+    $_EditBuilder = "@Url.Action("EditBuilder", "Builder",new  { Area="Admin"})";
+    $_AddBuilder = "@Url.Action("AddBuilder", "Manufacturer",new { Area = "Admin" })";
+    $_DeleteBuilder = "@Url.Action("DeleteBuilder", "Builder", new { Area = "Admin" })";
+    $_GetBuilderOrders = "@Url.Action("BuilderOrders", "Builder", new { Area = "Admin" })";
+    $_BuilderList = "@Url.HttpRouteUrl("DefaultApi", new { controller="BuilderAPI",action= "GetBuilder" })"
+    $_BuilderOrders = "@Url.HttpRouteUrl("DefaultApi", new { controller="BuilderAPI",action= "GetBuilderOrders" })"
+    $_GetBuilders = "@Url.HttpRouteUrl("DefaultApi", new { controller="BuilderAPI",action= "GetBuilders" })"
+
+
 
 
 </script>

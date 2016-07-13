@@ -31,7 +31,7 @@ namespace BuildersAlliances.Web.Areas.Order.Controllers
 
         public ActionResult AddOrder()
         {
-            ViewBag.ManufacturerList = _manufacturer.GetManufacturer();
+           // ViewBag.ManufacturerList = _manufacturer.GetManufacturer();
             ViewBag.OrderType = _order.GetOrderType();
             ViewBag.BuilderName = "";
             return View(); 
@@ -46,7 +46,7 @@ namespace BuildersAlliances.Web.Areas.Order.Controllers
         [HttpPost]
         public ActionResult EditOrder(Orders model)
         {
-            ViewBag.ManufacturerList = _manufacturer.GetManufacturer();
+            //ViewBag.ManufacturerList = _manufacturer.GetManufacturer();
             ViewBag.OrderType = _order.GetOrderType();
             ViewBag.BuilderName = model.BuilderName;
             return View("AddOrder", model);

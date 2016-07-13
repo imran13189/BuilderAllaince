@@ -1,7 +1,7 @@
 ﻿
 $(document).ready(function () {
 
-    $(".sidebar-menu .menu:eq(1) a").addClass("active")
+
     
 
     $("#addItem").hide();
@@ -50,8 +50,8 @@ $(document).ready(function () {
                 data: { OrderId: row.OrderId },
                 success: function (data) {
                     debugger;
-                    $("#OrderItems").empty();
-                    $("#OrderItems").html(data);
+                    $("#orderItemModal").empty();
+                    $("#orderItemModal").html(data);
                     $(".OrderItem").modal("show");
 
                 }
@@ -77,7 +77,8 @@ $(document).ready(function () {
         queryParams: function (param) {
             param.model = {
              
-                BuilderId: $("#BuilderId").val() 
+                BuilderId: $("#BuilderId").val(),
+                OrderId: $("#txtOrderId").val().trim() == "" ? 0 : $("#txtOrderId").val()
 
                 //ManufacturerName: $("#txtManufacturer").val(),
                 //ItemSKU: $("#txtItemSKU").val(),

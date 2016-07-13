@@ -90,7 +90,7 @@ namespace BuildersAlliances.Services
 
         public List<Items> GetItemByManufacturer(int ManufacturerId)
         {
-            return uow.Repository<Items>().GetAll(x => x.ManufacturerId == ManufacturerId).ToList();
+            return uow.Repository<Items>().GetAll(x => x.ManufacturerId == ManufacturerId&&x.IsDeleted==false).ToList();
         }
 
 

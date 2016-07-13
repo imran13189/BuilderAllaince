@@ -25,3 +25,18 @@
  .success-not{
    background-color:  #dff0d8;
  }
+
+.ui-autocomplete-loading {
+   // background: url('../../Images/load.gif') ;
+    background: url('images/load.gif') no-repeat right center;
+}
+
+    .ui-autocomplete {
+        max-height: 300px;
+        overflow-y: auto;
+        /* prevent horizontal scrollbar */
+        overflow-x: auto;
+        width: 300px;
+        /* add padding to account for vertical scrollbar */
+        padding-right: 20px;
+    }

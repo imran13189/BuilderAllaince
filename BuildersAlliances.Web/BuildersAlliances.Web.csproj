@@ -288,6 +288,7 @@
     <Content Include="Content\images\twitter_corner_black.png" />
     <Content Include="Content\images\twitter_corner_blue.png" />
     <Content Include="Content\images\weather_image.jpg" />
+    <Content Include="Content\jquery-ui.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\themes\base\accordion.css" />
     <Content Include="Content\themes\base\all.css" />
@@ -439,14 +440,13 @@
     <Content Include="Areas\Admin\Views\Builder\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Builder\Search.cshtml" />
     <Content Include="Areas\Admin\Views\Builder\OrderItem.cshtml" />
-    <Content Include="Areas\Admin\Views\Builder\Orders.cshtml" />
     <Content Include="Areas\Admin\Views\Builder\BuilderOrders.cshtml" />
-    <None Include="Properties\PublishProfiles\Builder.pubxml" />
     <Content Include="Scripts\bs3\css\bootstrap-theme.css.map" />
     <Content Include="Scripts\bs3\css\bootstrap.css.map" />
     <Content Include="Scripts\bs3\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Scripts\bs3\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Scripts\bs3\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="Properties\PublishProfiles\BuildersAllaince.pubxml" />
     <None Include="Scripts\jquery-2.2.0.intellisense.js" />
     <Content Include="Scripts\jquery-2.2.0.js" />
     <Content Include="Scripts\jquery-2.2.0.min.js" />

@@ -1,7 +1,6 @@
 ﻿$(document).ready(function () {
 
-    $(".sidebar-menu li:eq(1) a").addClass('active')
-    $(".sidebar-menu li:eq(1) .sub li:eq(0)").addClass('active')
+    $(".sidebar-menu .menu:eq(2) a").addClass("active")
 
 
     var Param = {};

@@ -22,3 +22,15 @@ E:\Projects\BuildersAlliances\BuildersAlliances.Repository\bin\Release\EntityFra
 E:\Projects\BuildersAlliances\BuildersAlliances.Repository\obj\Release\BuildersAlliances.Repository.csprojResolveAssemblyReference.cache
 E:\Projects\BuildersAlliances\BuildersAlliances.Repository\obj\Release\BuildersAlliances.Repository.dll
 E:\Projects\BuildersAlliances\BuildersAlliances.Repository\obj\Release\BuildersAlliances.Repository.pdb
+E:\Projects\BuilderAlliance\BuildersAlliances.Repository\bin\Release\BuildersAlliances.Repository.dll.config
+E:\Projects\BuilderAlliance\BuildersAlliances.Repository\bin\Release\BuildersAlliances.Repository.dll
+E:\Projects\BuilderAlliance\BuildersAlliances.Repository\bin\Release\BuildersAlliances.Repository.pdb
+E:\Projects\BuilderAlliance\BuildersAlliances.Repository\bin\Release\BuildersAlliances.Entities.dll
+E:\Projects\BuilderAlliance\BuildersAlliances.Repository\bin\Release\EntityFramework.dll
+E:\Projects\BuilderAlliance\BuildersAlliances.Repository\bin\Release\EntityFramework.SqlServer.dll
+E:\Projects\BuilderAlliance\BuildersAlliances.Repository\bin\Release\BuildersAlliances.Entities.pdb
+E:\Projects\BuilderAlliance\BuildersAlliances.Repository\bin\Release\EntityFramework.xml
+E:\Projects\BuilderAlliance\BuildersAlliances.Repository\bin\Release\EntityFramework.SqlServer.xml
+E:\Projects\BuilderAlliance\BuildersAlliances.Repository\obj\Release\BuildersAlliances.Repository.csprojResolveAssemblyReference.cache
+E:\Projects\BuilderAlliance\BuildersAlliances.Repository\obj\Release\BuildersAlliances.Repository.dll
+E:\Projects\BuilderAlliance\BuildersAlliances.Repository\obj\Release\BuildersAlliances.Repository.pdb

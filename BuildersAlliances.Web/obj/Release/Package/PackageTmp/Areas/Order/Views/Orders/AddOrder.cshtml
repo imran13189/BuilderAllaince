@@ -17,7 +17,9 @@
                     @using (Ajax.BeginForm("AddOrder", "Orders", new AjaxOptions { HttpMethod = "POST", OnSuccess = "AddSuccess", OnBegin = "ShowLoader" }, new { @class = "form-horizontal", @id = "signupaForm" }))
                     {
                         <div class="row">
-                           
+                            <div class="col-md-4">
+                                <label>Builder</label>
+                            </div>
 
                             <div class="col-md-4">
                                 <label>Order Type</label>
@@ -43,6 +45,12 @@
                             </div>*@
 
                             <div class="col-md-4">
+                                @Html.TextBox("SearchBuilder",(string)ViewBag.BuilderName, new { @class = "form-control col-md-4" })
+                                @Html.ValidationMessageFor(m => m.OrderTypeId, "", new { @class = "error" })
+                            </div>
+
+
+                            <div class="col-md-4">
                                 @Html.DropDownListFor(m => m.OrderTypeId, new SelectList((IEnumerable<BuildersAlliances.Domain.OrderType>)ViewBag.OrderType, "OrderTypeId", "OrderTypeName"), "--Select--", new { @class = "form-control col-md-4" })
                                 @Html.ValidationMessageFor(m => m.OrderTypeId, "", new { @class = "error" })
                             </div>
@@ -62,6 +70,7 @@
                                 </div>
 
                                 @Html.HiddenFor(model=>model.OrderId)
+                        @Html.HiddenFor(model => model.BuilderId)
                     }
                 
             </div>

@@ -68,7 +68,7 @@ $(document).ready(function () {
                     $("#btnSave").html("Update");
                     
                     $("#addOrder").show();
-
+                    AutocompleteInit();
                     
                     
 
@@ -208,6 +208,15 @@ $(document).ready(function () {
                   type: 'search',
 
               }
+               ,
+
+                {
+                    field: 'BuilderName',
+                    title: 'Builder',
+                    checkbox: false,
+                    type: 'search',
+                    sortable: true,
+                }
              ,
 
                 {
@@ -299,29 +308,7 @@ $(document).ready(function () {
 
     //$("#ManufacturerId").change(function () {
     
-    //    debugger;
-    
-    //       $.ajax({
-    //           url: $_GetItemByManufacturer,
-    //           type: "GET",
-    //           async:false,
-    //           data: { ManufacturerId: $(this).val() },
-    //                  success:function(result)
-    //                     {
-    //                      debugger;
-    //                      $("#ItemId").empty();
-    //                      $("#ItemId").append("<option value>----Select---</option>")
-    //                         $.each(result,function (i, item) {
-    //                             debugger;
-    //                             $("#ItemId").append("<option value="+item.ItemId+">"+item.ItemName+"</option>")
-
-    //                             });
-
-    //                     }
-
-    //       });
-
-    //});
+    AutocompleteInit();
 });
 
 
@@ -348,3 +335,49 @@ function AddSuccess(data) {
 }
 
 
+function AutocompleteInit()
+{
+    $("#SearchBuilder").autocomplete({
+
+        minLength: 0,
+        search: function () { $(this).addClass('ui-autocomplete-loading'); },
+        open: function () { $(this).removeClass('ui-autocomplete-loading'); },
+        source: function (request, response) {
+            $.ajax({
+                url: $_GetBuilders,
+                type: "GET",
+                dataType: "json",
+                data: { BuilderName: request.term },
+                success: function (data) {
+                    if (data.length) {
+                        response($.map(data, function (item) {
+                            return { label: item.BuilderName, value: item.BuilderName, Id: item.BuilderId };
+                        }))
+                    }
+                    else {
+                        var result = [
+                               {
+                                   label: 'No matches found. Click here to add new',
+                                   value: '',
+                                   Id: 0
+                               }
+                        ];
+                        return response(result);
+                    }
+
+                }
+            })
+        },
+        select: function (event, ui) {
+            if (ui.item.Id > 0) {
+
+                $("#BuilderId").val(ui.item.Id);
+
+            }
+
+        },
+        messages: {
+            noResults: "", results: ""
+        }
+    });
+}

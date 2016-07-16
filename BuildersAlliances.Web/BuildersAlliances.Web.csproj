@@ -180,6 +180,8 @@
     <Compile Include="API\InventoryAPIController.cs" />
     <Compile Include="API\LogsAPIController.cs" />
     <Compile Include="API\BuilderAPIController.cs" />
+    <Compile Include="API\QouteAPIController.cs" />
+    <Compile Include="API\UserAPIController.cs" />
     <Compile Include="API\TruckAPIController.cs" />
     <Compile Include="API\OrderAPIController.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -199,10 +201,15 @@
     <Compile Include="Areas\Admin\Controllers\BuilderController.cs" />
     <Compile Include="Areas\Admin\Controllers\ManufacturerController.cs" />
     <Compile Include="Areas\Admin\Controllers\TruckController.cs" />
+    <Compile Include="Areas\Admin\Controllers\UserController.cs" />
     <Compile Include="Areas\LogInfo\Controllers\LogInfoController.cs" />
     <Compile Include="Areas\LogInfo\LogInfoAreaRegistration.cs" />
     <Compile Include="Areas\Order\Controllers\OrdersController.cs" />
     <Compile Include="Areas\Order\OrderAreaRegistration.cs" />
+    <Compile Include="Areas\Qoute\Controllers\QouteController.cs" />
+    <Compile Include="Areas\Qoute\QouteAreaRegistration.cs" />
+    <Compile Include="Common\EmailService.cs" />
+    <Compile Include="Common\SessionManager.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Filters\UserAuthorized.cs" />
@@ -215,6 +222,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Readme\Elmah.txt" />
+    <Content Include="Areas\Qoute\Views\Qoute\QouteEmailTemplate.cshtml" />
+    <Content Include="Areas\Qoute\Views\Qoute\Message.cshtml" />
+    <None Include="Areas\Qoute\Views\Qoute\QouteTemplate.cshtml" />
     <Content Include="Content\bootstrap-select.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -284,6 +294,7 @@
     <Content Include="Content\images\sm-img-1.jpg" />
     <Content Include="Content\images\sm-img-2.jpg" />
     <Content Include="Content\images\sm-img-3.jpg" />
+    <Content Include="Content\images\thnks.png" />
     <Content Include="Content\images\top-arrow.png" />
     <Content Include="Content\images\twitter_corner_black.png" />
     <Content Include="Content\images\twitter_corner_blue.png" />
@@ -354,6 +365,8 @@
     <Content Include="Scripts\Custom\Builder.js" />
     <Content Include="Scripts\Custom\ManufacturerList.js" />
     <Content Include="Scripts\Custom\BuilderOrders.js" />
+    <Content Include="Scripts\Custom\QouteItem.js" />
+    <Content Include="Scripts\Custom\QouteOrder.js" />
     <Content Include="Scripts\Custom\OrderItem.js" />
     <Content Include="Scripts\Custom\ItemStatus.js" />
     <Content Include="Scripts\Custom\Truck.js" />
@@ -446,8 +459,20 @@
     <Content Include="Scripts\bs3\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Scripts\bs3\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Scripts\bs3\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Areas\Admin\Views\User\AddUser.cshtml" />
+    <Content Include="Areas\Admin\Views\User\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\User\UserSearch.cshtml" />
+    <Content Include="Areas\Admin\Views\User\EditUser.cshtml" />
+    <Content Include="Areas\Admin\Views\User\AssignRole.cshtml" />
+    <Content Include="Areas\Qoute\Views\web.config" />
+    <Content Include="Areas\Qoute\Views\Qoute\Index.cshtml" />
+    <Content Include="Areas\Qoute\Views\Qoute\AddQoute.cshtml" />
+    <Content Include="Areas\Qoute\Views\Qoute\AddQouteItem.cshtml" />
+    <Content Include="Areas\Qoute\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Qoute\Views\Qoute\QouteItem.cshtml" />
     <None Include="Properties\PublishProfiles\BuildersAllaince.pubxml" />
     <None Include="Scripts\jquery-2.2.0.intellisense.js" />
+    <Content Include="Scripts\Custom\Users.js" />
     <Content Include="Scripts\jquery-2.2.0.js" />
     <Content Include="Scripts\jquery-2.2.0.min.js" />
     <Content Include="Scripts\jquery-ui-1.11.4.js" />
@@ -601,6 +626,8 @@
     <Folder Include="Areas\LogInfo\Models\" />
     <Folder Include="Areas\LogInfo\Views\Shared\" />
     <Folder Include="Areas\Order\Views\Shared\" />
+    <Folder Include="Areas\Qoute\Models\" />
+    <Folder Include="Areas\Qoute\Views\Shared\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>

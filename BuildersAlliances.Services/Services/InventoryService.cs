@@ -34,7 +34,7 @@ namespace BuildersAlliances.Services
             catch (Exception e)
             {
 
-                return false;
+                throw e;
             }
         }
         public bool RemoveQuantity(Inventory model)
@@ -45,10 +45,10 @@ namespace BuildersAlliances.Services
                 data.Quantity -= model.Quantity;
                 return true;
             }
-            catch
+            catch(Exception e)
             {
 
-                return false;
+                throw e;
             }
         }
 

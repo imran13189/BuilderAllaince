@@ -1,0 +1,82 @@
+﻿
+<link href="~/Content/jquery-ui.css" rel="stylesheet" />
+
+<script src="~/Scripts/jquery-ui-1.11.4.min.js"></script>
+<script src="~/Scripts/Custom/QouteOrder.js"></script>
+<div id="addQoute" style="display:none">
+    @Html.Action("AddQoute", "Qoute")
+</div>
+<div class="row">
+    <div class="col-sm-12">
+        <section class="panel">
+            <header class="panel-heading">
+                Qoutes
+            </header>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-lg-2">
+
+                        <input class="form-control FilterSearch" id="txtQouteId" placeholder="Qoute Number" type="text" name="FilterSearch">
+
+                    </div>
+
+                    
+
+                    
+                    <div class="col-lg-2 pull-right">
+
+                        <input type="button" id="btnAddQoute" class="btn btn-info" value="Add Qoute">
+                    </div>
+
+                </div>
+
+                <table class="table table-hover" data-show-columns="true" data-show-filter="true" data-click-to-select="true"
+                       id="grid">
+                    <thead>
+
+                    </thead>
+                </table>
+
+
+
+            </div>
+        </section>
+    </div>
+</div>
+
+
+
+<div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" class="modal fade QouteItem">
+    <div class="modal-dialog" style="width:80%">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+                <h4 class="modal-title">Add items</h4>
+            </div>
+            <div id="QouteItems">
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" class="modal fade QouteTemplate">
+    <div class="modal-dialog" style="width:70%">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+                <h4 class="modal-title">Qoute</h4>
+            </div>
+
+        
+
+            <div id="QouteTemplate">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

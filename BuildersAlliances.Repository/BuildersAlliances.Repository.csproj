@@ -53,21 +53,7 @@
     <Compile Include="BuildersAlliancesContext.cs" />
     <Compile Include="EfRepository.cs" />
     <Compile Include="IEfRepository.cs" />
-    <Compile Include="Interfaces\IInventory.cs" />
-    <Compile Include="Interfaces\IItem.cs" />
-    <Compile Include="Interfaces\ILogInfo.cs" />
-    <Compile Include="Interfaces\IManufacturer.cs" />
-    <Compile Include="Interfaces\IOrder.cs" />
-    <Compile Include="Interfaces\ITruck.cs" />
-    <Compile Include="Interfaces\IUsers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repository\InventoryRepositry.cs" />
-    <Compile Include="Repository\ItemRepository.cs" />
-    <Compile Include="Repository\LogInfoRepository.cs" />
-    <Compile Include="Repository\ManufacturerRepository.cs" />
-    <Compile Include="Repository\OrderRepository.cs" />
-    <Compile Include="Repository\TruckRepository.cs" />
-    <Compile Include="Repository\UserRepository.cs" />
     <Compile Include="UnitOfWork.cs" />
   </ItemGroup>
   <ItemGroup>

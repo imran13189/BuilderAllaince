@@ -47,7 +47,7 @@ namespace BuildersAlliances.Services
             catch (Exception e)
             {
 
-                return false;
+                throw e;
             }
         }
         public bool DeleteTruck(int TruckId)

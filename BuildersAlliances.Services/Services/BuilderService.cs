@@ -49,7 +49,7 @@ namespace BuildersAlliances.Services
             catch (Exception e)
             {
 
-                return false;
+                throw e;
             }
         }
         public bool DeleteBuilder(BuilderModel model)
@@ -61,7 +61,7 @@ namespace BuildersAlliances.Services
                 uow.SaveChanges();
                 return true;
             }
-            catch { return false; }
+            catch(Exception e) { throw e; }
 
         }
         public List<BuilderModel> GetBuilder(int limit, int offset,string order, string sort, BuilderModel model)

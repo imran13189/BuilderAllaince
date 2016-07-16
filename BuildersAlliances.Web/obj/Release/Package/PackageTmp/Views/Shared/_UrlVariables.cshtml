@@ -68,6 +68,8 @@
     $_TruckList = "@Url.HttpRouteUrl("DefaultApi", new { controller="TruckAPI",action= "GetTrucks" })"
 
 
+
+
     /*-----------------------------LogInfo---------------------------------*/
 
     $_LogInfoList = "@Url.HttpRouteUrl("DefaultApi", new { controller="LogsAPI",action= "GetLogInfo" })"
@@ -83,6 +85,13 @@
     $_GetBuilders = "@Url.HttpRouteUrl("DefaultApi", new { controller="BuilderAPI",action= "GetBuilders" })"
 
 
+
+    /*-----------------------------Users---------------------------------*/
+    $_EditUser = "@Url.Action("EditUser", "User",new  { Area="Admin"})";
+    $_AddUser = "@Url.Action("AddUser", "Manufacturer",new { Area = "Admin" })";
+    $_DeleteUser = "@Url.Action("DeleteUser", "User", new { Area = "Admin" })";
+    $_AssignRole = "@Url.Action("AssignRole", "User", new { Area = "Admin" })";
+    $_UsersList = "@Url.HttpRouteUrl("DefaultApi", new { controller="UserAPI",action= "GetUsers" })"
 
 
 </script>

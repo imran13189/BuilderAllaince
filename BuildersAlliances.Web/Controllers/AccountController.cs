@@ -7,6 +7,7 @@ using BuildersAlliances.Domain;
 using BuildersAlliances.Services.Interfaces;
 using BuildersAlliances.CustomModel;
 using System.Web.Security;
+using BuildersAlliances.Common;
 
 namespace BuildersAlliances.Web.Controllers
 {
@@ -34,8 +35,10 @@ namespace BuildersAlliances.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                if (_user.Authenticate(model.Email, model.Password))
+                Users data = _user.Authenticate(model.Email, model.Password);
+                if(data!=null)
                 {
+                    SessionManager.FillSession(data.UserId, data.Email, data.Name, data.UserInRole.Select(x => x.RoleId).ToArray());
                     FormsAuthentication.SetAuthCookie(model.Email, true);
                     FormsAuthenticationTicket ticket = new FormsAuthenticationTicket(
                    1, // Ticket version

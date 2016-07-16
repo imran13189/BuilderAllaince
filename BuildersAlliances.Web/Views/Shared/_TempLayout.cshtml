@@ -195,9 +195,12 @@
                     </li>
                     <!-- inbox dropdown end -->
                     <!-- notification dropdown start-->
+                @if (BuildersAlliances.Common.SessionManager.LoggedInUser.RoleId.Contains(1))
+                {
                     <li id="header_notification_bar" class="dropdown">
                         @Html.Action("Notification", "Home", new { area = "" })
                         </li>
+                }
                         <!-- notification dropdown end -->
 </ul>
                 <!--  notification end -->
@@ -233,42 +236,87 @@
         <aside>
             <div id="sidebar" class="nav-collapse">
                 <!-- sidebar menu start-->            <div class="leftside-navigation">
-                    <ul class="sidebar-menu" id="nav-accordion">
-                        <li class="menu">
-                            <a href="@Url.Action("Index","Dashboard",new  {Area="Admin" })">
-                                <i class="fa fa-dashboard"></i>
-                                <span>Dashboard</span>
-                            </a>
-                        </li>
-                        <li class="sub-menu">
-                            <a href="javascript:;">
-                                <i class="fa fa-laptop"></i>
-                                <span>Masters</span>
-                            </a>
-                            <ul class="sub">
-                                <li><a href="@Url.Action("Index","Manufacturer",new  {Area="Admin" })">Manufacturer</a></li>
-                                <li><a href="@Url.Action("Index","Item",new  {Area="Admin" })">Item</a></li>
-                                <li><a href="@Url.Action("Index","Inventory",new  {Area="Admin" })">Inventory</a></li>
-                                <li><a href="@Url.Action("Index","Truck",new  {Area="Admin" })">Trucks</a></li>
-                                @*<li><a href="@Url.Action("Index","LogInfo",new  {Area="LogInfo" })">Logs</a></li>*@
-                              
-                            </ul>
-                        </li>
-                        <li class="menu">
-                            <a href="@Url.Action("Index","Orders",new  {Area="Order" })">
-                                <i class="fa fa-dashboard"></i>
-                                <span>Orders</span>
-                            </a>
-                        </li>
-                        <li class="menu">
-                            <a href="@Url.Action("Index","Builder",new  {Area="Admin" })">
-                                <i class="fa fa-dashboard"></i>
-                                <span>Builder</span>
-                            </a>
-                        </li>
-                       
-                    </ul>
-                </div>
+                                                          <ul class="sidebar-menu" id="nav-accordion">
+                                                              @if (BuildersAlliances.Common.SessionManager.LoggedInUser.RoleId.Contains(1))
+                                                              {
+
+                                                                  <li class="menu">
+                                                                      <a href="@Url.Action("Index", "Dashboard", new { Area = "Admin" })">
+                                                                          <i class="fa fa-dashboard"></i>
+                                                                          <span>Admin Dashboard</span>
+                                                                      </a>
+                                                                  </li>
+                                                                  <li class="sub-menu">
+                                                                      <a href="javascript:;">
+                                                                          <i class="fa fa-laptop"></i>
+                                                                          <span>Masters</span>
+                                                                      </a>
+                                                                      <ul class="sub">
+                                                                          <li><a href="@Url.Action("Index", "Manufacturer", new { Area = "Admin" })">Manufacturer</a></li>
+                                                                          <li><a href="@Url.Action("Index", "Item", new { Area = "Admin" })">Item</a></li>
+                                                                          <li><a href="@Url.Action("Index", "Inventory", new { Area = "Admin" })">Inventory</a></li>
+                                                                          <li><a href="@Url.Action("Index", "Truck", new { Area = "Admin" })">Trucks</a></li>
+                                                                          @*<li><a href="@Url.Action("Index","LogInfo",new  {Area="LogInfo" })">Logs</a></li>*@
+
+                                                                      </ul>
+                                                                  </li>
+                                                                  <li class="menu">
+                                                                      <a href="@Url.Action("Index", "Orders", new { Area = "Order" })">
+                                                                          <i class="fa fa-dashboard"></i>
+                                                                          <span>Orders</span>
+                                                                      </a>
+                                                                  </li>
+                                                                  <li class="menu">
+                                                                      <a href="@Url.Action("Index", "Builder", new { Area = "Admin" })">
+                                                                          <i class="fa fa-dashboard"></i>
+                                                                          <span>Builder</span>
+                                                                      </a>
+                                                                  </li>
+
+                                                                  <li class="menu">
+                                                                      <a href="@Url.Action("Index", "User", new { Area = "Admin" })">
+                                                                          <i class="fa fa-dashboard"></i>
+                                                                          <span>User</span>
+                                                                      </a>
+                                                                  </li>
+
+
+                                                                <li class="menu">
+                                                                    <a href="@Url.Action("Index", "Qoute", new { Area = "Qoute" })">
+                                                                        <i class="fa fa-dashboard"></i>
+                                                                        <span>Qoute</span>
+                                                                    </a>
+                                                                </li>
+
+
+                                                              }
+
+                                                            
+
+                                                              @if (BuildersAlliances.Common.SessionManager.LoggedInUser.RoleId.Contains(3))
+                                                              {
+                                                                
+                                                                      <li class="menu">
+                                                                          <a href="@Url.Action("Index", "Dashboard", new { Area = "Admin" })">
+                                                                              <i class="fa fa-dashboard"></i>
+                                                                              <span>BackOffice Dashboard</span>
+                                                                          </a>
+                                                                      </li>
+                                                                 
+                                                              }
+                                                              @if (BuildersAlliances.Common.SessionManager.LoggedInUser.RoleId.Contains(2))
+                                                              {
+
+                                                                  <li class="menu">
+                                                                      <a href="@Url.Action("Index", "Dashboard", new { Area = "Admin" })">
+                                                                          <i class="fa fa-dashboard"></i>
+                                                                          <span>Gun User Dashboard</span>
+                                                                      </a>
+                                                                  </li>
+
+                                                              }
+                                                          </ul>
+</div>
                 <!-- sidebar menu end-->
             </div>
         </aside>
@@ -536,7 +584,7 @@
     </section>
 
 
-    <div id="modalLoader" aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="" class="modal fade">
+    <div id="modalLoader" aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1"  class="modal fade">
         <div style="margin-left:44%;margin-top:17%">
         <img src="~/Content/images/loading1.gif" />
             </div>

@@ -20,7 +20,22 @@ namespace BuildersAlliances.Repository
         }
         public bool CreateUser(Users model)
         {
-            uow.Repository<Users>().Add(model);
+            if (model.UserId == 0)
+            {
+                uow.Repository<Users>().Add(model);
+            }
+            else
+            {
+               Users user= uow.Repository<Users>().Get(x => x.UserId == model.UserId);
+               user.Username = model.Username;
+               user.Email = model.Email;
+                user.Phone = model.Phone;
+                user.Name = model.Name;
+                user.Email = model.Email;
+
+
+            }
+            uow.SaveChanges();
             return true;
         }
         public bool Authenticate(string Email,string Password)
@@ -34,5 +49,13 @@ namespace BuildersAlliances.Repository
                 return false;
             }
         }
+
+        //public bool DeleteUser(int UserId)
+        //{
+        //    Users model= uow.Repository<Users>().Get(x => x.UserId == UserId);
+        //    model.IsDeleted = true;
+        //    uow.SaveChanges();
+        //    return true;
+        //}
     }
 }

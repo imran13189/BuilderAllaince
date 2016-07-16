@@ -47,7 +47,7 @@ namespace BuildersAlliances.Services
             }
             catch (Exception e)
             {
-                return false;
+                throw e;
             }
 
         }
@@ -62,7 +62,7 @@ namespace BuildersAlliances.Services
             }
             catch (Exception e)
             {
-                return false;
+                throw e;
             }
         }
         public List<OrderModel> GetOrder(int limit, int offset, string sort, OrderModel model)
@@ -104,8 +104,8 @@ namespace BuildersAlliances.Services
 
                     data.Quantity = model.Quantity;
                     data.DeliveryDate = model.DeliveryDate;
-                   
-                  
+
+
                     data.ItemId = model.ItemId;
 
                 }
@@ -115,9 +115,9 @@ namespace BuildersAlliances.Services
             }
             catch (Exception e)
             {
-                return false;
-            }
+                throw e;
 
+            }
         }
         public bool DeleteOrderItem(long OrderItemId)
         {
@@ -130,7 +130,7 @@ namespace BuildersAlliances.Services
             }
             catch (Exception e)
             {
-                return false;
+                throw e;
             }
         }
         public List<OrderItemModel> GetOrderItem(int limit, int offset, string sort, OrderItemModel model)
@@ -218,7 +218,7 @@ namespace BuildersAlliances.Services
                 return true;
             }
             catch(Exception e) {
-                return false;
+                throw e;
             }
         }
 
@@ -236,9 +236,9 @@ namespace BuildersAlliances.Services
                 uow.SaveChanges();
                 return true;
             }
-            catch
+            catch (Exception e)
             {
-                return false;
+                throw e;
             }
         }
 

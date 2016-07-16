@@ -43,6 +43,11 @@ namespace BuildersAlliances.Repository
         public System.Data.Entity.DbSet<OrderStatus> OrderStatus { get; set; }
         public System.Data.Entity.DbSet<Notification> Notification { get; set; }
         public System.Data.Entity.DbSet<Builder> Builder { get; set; }
+        public System.Data.Entity.DbSet<Roles> Roles { get; set; }
+        public System.Data.Entity.DbSet<UserInRole> UserInRole { get; set; }
+        public System.Data.Entity.DbSet<Qoute> Qoute { get; set; }
+        public System.Data.Entity.DbSet<QouteItems> QouteItems { get; set; }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<DiscountType>().Property(x => x.Multiplier).HasPrecision(16, 3);

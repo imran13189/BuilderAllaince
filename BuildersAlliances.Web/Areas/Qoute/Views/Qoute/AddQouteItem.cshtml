@@ -1,0 +1,106 @@
+﻿@model BuildersAlliances.Domain.QouteItems
+
+
+@{
+    ViewBag.Title = "AddManufaturer";
+    Layout = null;
+}
+
+
+
+
+<link href="~/Scripts/js/bootstrap-datepicker/css/datepicker.css" rel="stylesheet" />
+
+
+<div class="row">
+    <div class="col-lg-12">
+        <section class="panel">
+          
+            <div class="panel-body">
+             
+                    @using (Ajax.BeginForm("AddQouteItem", "Qoute", new AjaxOptions { HttpMethod = "POST", OnSuccess = "AddItemSuccess", OnBegin = "ShowLoader" }, new { @class = "form-horizontal", @id = "ItemForm" }))
+                    { 
+                        <div class="row">
+                            <div class="col-md-4">
+                            <label  >Manufacturer</label>
+                          </div>
+
+                            <div class="col-md-4">
+                                <label>Item</label>
+                                </div>
+
+                          
+                            
+
+                                <div class="col-md-4">
+                                    <label>Quantity</label>
+                                </div>
+
+
+                              
+                         </div>
+                        <div class="row">
+                            
+                            <div class="col-md-4">
+                                @Html.DropDownList("ManufacturerId", new SelectList((IEnumerable<BuildersAlliances.Domain.Manufacturer>)ViewBag.ManufacturerList,"ManufacturerId","ManufacturerName"),"--Select--" ,new { @class = "form-control col-md-4"})
+                                @Html.ValidationMessage("ManufacturerId", "", new { @class = "error" })
+                            </div>
+
+                            <div class="col-md-4">
+                                @*<select id="ItemId" class="form-control col-md-4 input-validation-error" data-val="true" data-val-number="The field ManufacturerId must be a number." data-val-required="The ManufacturerId field is required." ></select>
+                                <span class="error field-validation-error" data-valmsg-for="ManufacturerId" data-valmsg-replace="true"><span for="ManufacturerId" class="">The ManufacturerId field is required.</span></span>*@
+                                @Html.DropDownListFor(m=>m.ItemId,new SelectList(new List<string>()), "--Select--", new { @class = "form-control col-md-4" })
+                                @Html.ValidationMessageFor(m => m.ItemId, "", new { @class = "error" })
+
+    
+                            </div>
+
+                            <div class="col-md-4">
+                             
+                                @Html.TextBoxFor(m => m.Quantity, new { @class = "form-control col-md-4" })
+                                @Html.ValidationMessageFor(m => m.Quantity, "", new { @class = "error" })
+
+
+                            </div>
+
+                         
+                            </div>
+
+                   
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label>Price</label>
+                        </div>
+
+                    </div>
+                    <div class="row">
+
+
+                        <div class="col-md-4">
+
+                            @Html.TextBoxFor(m => m.Price, new { @class = "form-control col-md-4 Delivery" })
+                            
+
+
+                        </div>
+                    </div>
+
+
+                            <div class="row">
+                                <div class="pull-right btnsetting">
+                                         <button type="submit" id="btnSaveItem" class="btn btn-info">Save</button>
+                                    <button type="button" onclick="CloseItem();" class="btn btn-cancel">Cancel</button>
+                                    </div>
+                                </div>
+
+                                @Html.HiddenFor(model=>model.QouteItemId)
+                                @Html.HiddenFor(m => m.QouteId)
+                    }
+                
+            </div>
+        </section>
+    </div>
+</div>
+
+
+

@@ -102,6 +102,21 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Areas/Admin/Views/Truck/TruckSearch.cshtml">
       <publishTime>06/22/2016 00:03:07</publishTime>
     </File>
+    <File Include="Areas/Admin/Views/User/AddUser.cshtml">
+      <publishTime>07/14/2016 23:32:20</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/User/AssignRole.cshtml">
+      <publishTime>07/15/2016 00:49:36</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/User/EditUser.cshtml">
+      <publishTime>07/14/2016 23:00:19</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/User/Index.cshtml">
+      <publishTime>07/15/2016 00:22:56</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/User/UserSearch.cshtml">
+      <publishTime>07/14/2016 22:47:30</publishTime>
+    </File>
     <File Include="Areas/Admin/Views/web.config">
       <publishTime>04/16/2016 17:32:18</publishTime>
     </File>
@@ -130,7 +145,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/30/2016 23:16:23</publishTime>
     </File>
     <File Include="Areas/Order/Views/Orders/Index.cshtml">
-      <publishTime>07/03/2016 23:19:42</publishTime>
+      <publishTime>07/15/2016 01:37:06</publishTime>
     </File>
     <File Include="Areas/Order/Views/Orders/OrderItem.cshtml">
       <publishTime>06/09/2016 01:35:28</publishTime>
@@ -145,16 +160,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/16/2016 00:03:04</publishTime>
     </File>
     <File Include="bin/BuildersAlliances.Entities.dll">
-      <publishTime>07/03/2016 23:27:14</publishTime>
+      <publishTime>07/15/2016 23:09:09</publishTime>
     </File>
     <File Include="bin/BuildersAlliances.Repository.dll">
-      <publishTime>07/03/2016 23:27:14</publishTime>
+      <publishTime>07/15/2016 23:09:10</publishTime>
     </File>
     <File Include="bin/BuildersAlliances.Services.dll">
-      <publishTime>07/03/2016 23:27:15</publishTime>
+      <publishTime>07/15/2016 23:09:10</publishTime>
     </File>
     <File Include="bin/BuildersAlliances.Web.dll">
-      <publishTime>07/03/2016 23:27:17</publishTime>
+      <publishTime>07/15/2016 23:09:13</publishTime>
     </File>
     <File Include="bin/Elmah.dll">
       <publishTime>04/30/2016 09:35:52</publishTime>
@@ -852,6 +867,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Scripts/Custom/Truck.js">
       <publishTime>06/22/2016 00:20:31</publishTime>
     </File>
+    <File Include="Scripts/Custom/Users.js">
+      <publishTime>07/15/2016 01:47:15</publishTime>
+    </File>
     <File Include="Scripts/jquery-2.2.0.js">
       <publishTime>01/30/2016 17:09:10</publishTime>
     </File>
@@ -1249,10 +1267,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/22/2016 01:59:59</publishTime>
     </File>
     <File Include="Views/Shared/_TempLayout.cshtml">
-      <publishTime>06/26/2016 23:38:37</publishTime>
+      <publishTime>07/15/2016 23:06:52</publishTime>
     </File>
     <File Include="Views/Shared/_UrlVariables.cshtml">
-      <publishTime>07/03/2016 01:19:50</publishTime>
+      <publishTime>07/15/2016 00:20:56</publishTime>
     </File>
     <File Include="Views/Web.config">
       <publishTime>04/18/2016 22:03:39</publishTime>
@@ -1261,7 +1279,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/16/2016 21:00:30</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>07/03/2016 23:27:25</publishTime>
+      <publishTime>07/15/2016 01:41:38</publishTime>
     </File>
   </ItemGroup>
 </Project>

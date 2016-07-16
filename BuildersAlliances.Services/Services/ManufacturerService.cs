@@ -50,7 +50,7 @@ namespace BuildersAlliances.Services
             }
             catch (Exception e)
             {
-                return false;
+                throw e;
             }
         }
         public bool DeleteManufacturer(int ManufacturerId)
@@ -70,7 +70,7 @@ namespace BuildersAlliances.Services
             }
             catch(Exception e)
             {
-                return false;
+                throw e;
             }
 
         }
@@ -128,7 +128,7 @@ namespace BuildersAlliances.Services
             }
             catch (Exception e)
             {
-                return false;
+                throw e;
             }
         }
         public bool DeleteDiscoutType(int ManufacturerId)
@@ -184,7 +184,7 @@ namespace BuildersAlliances.Services
                 uow.SaveChanges();
                 return true;
             }
-            catch (Exception e) { return true; }
+            catch (Exception e) { throw e; }
         }
 
 

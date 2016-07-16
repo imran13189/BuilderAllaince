@@ -11,5 +11,7 @@ namespace BuildersAlliances.Repository.Interfaces
     {
         bool CreateUser(Users model);
         bool Authenticate(string Email, string Password);
+
+            
     }
 }

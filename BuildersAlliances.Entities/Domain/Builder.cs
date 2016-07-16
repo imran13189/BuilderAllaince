@@ -28,7 +28,9 @@ namespace BuildersAlliances.Domain
 
         public string BuilderName { get; set; }
 
-       
+        public ICollection<Qoute> Qoute { get; set; }
+
+
 
     }
 }

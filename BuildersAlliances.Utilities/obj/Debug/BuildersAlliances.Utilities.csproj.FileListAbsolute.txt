@@ -7,3 +7,8 @@ E:\Projects\BuildersAlliances\BuildersAlliances.Utilities\bin\Debug\BuildersAlli
 E:\Projects\BuildersAlliances\BuildersAlliances.Utilities\obj\Debug\BuildersAlliances.Utilities.csprojResolveAssemblyReference.cache
 E:\Projects\BuildersAlliances\BuildersAlliances.Utilities\obj\Debug\BuildersAlliances.Utilities.dll
 E:\Projects\BuildersAlliances\BuildersAlliances.Utilities\obj\Debug\BuildersAlliances.Utilities.pdb
+E:\Projects\BuilderAlliance\BuildersAlliances.Utilities\bin\Debug\BuildersAlliances.Utilities.dll
+E:\Projects\BuilderAlliance\BuildersAlliances.Utilities\bin\Debug\BuildersAlliances.Utilities.pdb
+E:\Projects\BuilderAlliance\BuildersAlliances.Utilities\obj\Debug\BuildersAlliances.Utilities.csprojResolveAssemblyReference.cache
+E:\Projects\BuilderAlliance\BuildersAlliances.Utilities\obj\Debug\BuildersAlliances.Utilities.dll
+E:\Projects\BuilderAlliance\BuildersAlliances.Utilities\obj\Debug\BuildersAlliances.Utilities.pdb

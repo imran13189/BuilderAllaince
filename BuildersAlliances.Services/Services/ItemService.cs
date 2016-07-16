@@ -50,7 +50,7 @@ namespace BuildersAlliances.Services
                 uow.SaveChanges();
                 return true;
             }
-            catch (Exception e) { return false; }
+            catch (Exception e) { throw e; }
 
         }
         public List<ItemModel> GetItem(int limit, int offset, string order, string sort, ItemModel model)
@@ -84,7 +84,7 @@ namespace BuildersAlliances.Services
             }
             catch (Exception e)
             {
-                return false;
+                throw e;
             }
         }
 

@@ -68,6 +68,8 @@
     $_TruckList = "@Url.HttpRouteUrl("DefaultApi", new { controller="TruckAPI",action= "GetTrucks" })"
 
 
+
+
     /*-----------------------------LogInfo---------------------------------*/
 
     $_LogInfoList = "@Url.HttpRouteUrl("DefaultApi", new { controller="LogsAPI",action= "GetLogInfo" })"
@@ -84,5 +86,28 @@
 
 
 
+    /*-----------------------------Users---------------------------------*/
+    $_EditUser = "@Url.Action("EditUser", "User",new  { Area="Admin"})";
+    $_AddUser = "@Url.Action("AddUser", "Manufacturer",new { Area = "Admin" })";
+    $_DeleteUser = "@Url.Action("DeleteUser", "User", new { Area = "Admin" })";
+    $_AssignRole = "@Url.Action("AssignRole", "User", new { Area = "Admin" })";
+    $_UsersList = "@Url.HttpRouteUrl("DefaultApi", new { controller="UserAPI",action= "GetUsers" })"
+
+
+    /*-----------------------------Order----------------------------------------*/
+    /*-----------------------------Order---------------------------------*/
+    $_EditQoute = "@Url.Action("EditQoute", "Qoutes", new  { Area="Order"})";
+    // $_AddManufacturer = "@Url.Action("AddQoute", "Qoute")";
+    $_QouteList = "@Url.HttpRouteUrl("DefaultApi", new { controller="QouteAPI",action= "GetQoute" })"
+    $_DeleteQoute = "@Url.Action("DeleteQoute", "Qoutes", new { Area = "Qoute" })";
+    $_GetItemByManufacturer = "@Url.HttpRouteUrl("DefaultApi", new { controller="OrderAPI",action= "GetItemByManufacturer" })"
+    $_EditQouteItem = "@Url.Action("EditQouteItem", "Qoute", new  { Area= "Qoute" })";
+
+    $_GetQouteItem = "@Url.Action("QouteItem", "Qoute", new { Area = "Qoute" })";
+    $_GetQouteTemplate = "@Url.Action("QouteTemplate", "Qoute", new { Area = "Qoute" })";
+    $_QouteItem = "@Url.HttpRouteUrl("DefaultApi", new { controller="QouteAPI",action= "GetQouteItem" })"
+    $_GetQouteTemplate = "@Url.Action("QouteTemplate", "Qoute", new { Area = "Qoute" })";
+
+    $_SendQoute = "@Url.Action("SendQoute", "Qoute", new { Area = "Qoute" })";
 
 </script>

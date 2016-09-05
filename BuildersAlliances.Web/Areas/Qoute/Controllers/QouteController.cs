@@ -48,7 +48,7 @@ namespace BuildersAlliances.Web.Areas.Qoute.Controllers
             //ViewBag.ManufacturerList = _manufacturer.GetManufacturer();
             
             ViewBag.BuilderName = model.BuilderName;
-            return View("AddOrder", model);
+            return View("AddQoute", model);
         }
         
         public ActionResult DeleteQoute(int QouteId)
@@ -77,14 +77,14 @@ namespace BuildersAlliances.Web.Areas.Qoute.Controllers
         }
 
         [HttpPost]
-        public ActionResult EditOrderItem(OrderItem model)
+        public ActionResult EditQouteItem(QouteItems model)
         {
             ViewBag.ManufacturerList = _manufacturer.GetManufacturer();
             
-            return View("AddOrderItem", model);
+            return View("AddQouteItem", model);
         }
 
-        public ActionResult DeleteOrderItem(int QouteItemId)
+        public ActionResult DeleteQouteItem(int QouteItemId)
         {
             return Json(_qoute.DeleteQouteItem(QouteItemId), JsonRequestBehavior.AllowGet);
         }
@@ -106,7 +106,7 @@ namespace BuildersAlliances.Web.Areas.Qoute.Controllers
         {
             BuildersAlliances.Domain.Qoute data = _qoute.GetQoute(QouteId);
             string content = RenderRazorViewToString("QouteEmailTemplate", data);
-            EmailService.SendQouteInEmail(data.Builder.Email,"Qoutation", content, true, true);
+            EmailService.SendQouteInEmail(data.Builder.Email,"Quotation", content, true, true);
             return Json(true,JsonRequestBehavior.AllowGet);
         }
 

@@ -24,5 +24,7 @@ namespace BuildersAlliances.CustomModel
         public decimal TotalCost { get; set; }
 
         public int TotalRows { get; set; }
+
+        public int ManufacturerId { get; set; }
     }
 }

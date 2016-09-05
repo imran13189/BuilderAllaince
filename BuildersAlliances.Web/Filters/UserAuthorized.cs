@@ -14,7 +14,7 @@ namespace BuildersAlliances.Web.Filters
         {
             try
             {
-                if (HttpContext.Current.Session["TokenID"]==null)
+                if (BuildersAlliances.Common.SessionManager.LoggedInUser.RoleId==null)
                 {
                     if (!HttpContext.Current.Response.IsRequestBeingRedirected)
                     {

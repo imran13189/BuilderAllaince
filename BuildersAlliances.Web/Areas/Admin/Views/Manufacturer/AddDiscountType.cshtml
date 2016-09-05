@@ -42,7 +42,7 @@
                                 @Html.ValidationMessageFor(m => m.DiscountTypeName, "", new { @class="error" })
                              </div>
                             <div class="col-md-4">
-                                @Html.TextBoxFor(m => m.Multiplier, new { @class = "form-control col-md-4", placeholder = "Multiplier" })
+                                @Html.TextBoxFor(m => m.Multiplier, new {@Value=Model.DiscountTypeId==0?"": Convert.ToString(Model.Multiplier), @class = "form-control col-md-4", placeholder = "Multiplier" })
                                 @Html.ValidationMessageFor(m => m.Multiplier, "", new { @class = "error" })
                             </div>
                             <div class="col-md-4">

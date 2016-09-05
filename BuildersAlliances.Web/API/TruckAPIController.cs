@@ -17,7 +17,7 @@ namespace BuildersAlliances.Web.API
     }
     public class TruckDetail
     {
-        public List<TruckModel> data;
+        public IList<TruckModel> data;
         public int count;
     }
     public class TruckAPIController : ApiController

@@ -90,7 +90,9 @@ namespace BuildersAlliances.Services
 
         public List<Items> GetItemByManufacturer(int ManufacturerId)
         {
-            return uow.Repository<Items>().GetAll(x => x.ManufacturerId == ManufacturerId&&x.IsDeleted==false).ToList();
+            uow.DisableProxy();
+            List<Items> data= uow.Repository<Items>().GetAll(x => x.ManufacturerId == ManufacturerId && x.IsDeleted == false).ToList();
+            return data;
         }
 
 
@@ -102,6 +104,11 @@ namespace BuildersAlliances.Services
         public List<DoorStyle> GetDoors(int ManufacturerId)
         {
             return uow.Repository<DoorStyle>().GetAll(x => x.ManufacturerId == ManufacturerId&&x.IsDeleted==false).ToList();
+        }
+
+        public decimal GetItemPrice(long ItemId)
+        {
+           return uow.Repository<Items>().AsQuerable().FirstOrDefault(x => x.ItemId == ItemId).ListPrice;
         }
 
 

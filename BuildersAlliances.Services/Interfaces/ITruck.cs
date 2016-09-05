@@ -12,7 +12,7 @@ public    interface ITruck
     {
         bool AddTruck(Trucks model);
         bool DeleteTruck(int TruckId);
-        List<TruckModel> GetTrucks(int limit, int offset, string sort, TruckModel model);
-        List<TruckType> GetTruckType();
+        IList<TruckModel> GetTrucks(int limit, int offset, string sort, TruckModel model);
+        IList<TruckType> GetTruckType();
     }
 }

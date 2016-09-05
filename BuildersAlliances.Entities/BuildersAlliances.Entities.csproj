@@ -61,7 +61,9 @@
     <Compile Include="CustomModel\NotificationItem.cs" />
     <Compile Include="CustomModel\OrderItemModel.cs" />
     <Compile Include="CustomModel\OrderModel.cs" />
+    <Compile Include="CustomModel\InvoiceItemModel.cs" />
     <Compile Include="CustomModel\QouteItemsModel.cs" />
+    <Compile Include="CustomModel\InvoiceModel.cs" />
     <Compile Include="CustomModel\QouteModel.cs" />
     <Compile Include="CustomModel\RegisterModel.cs" />
     <Compile Include="CustomModel\TruckModel.cs" />
@@ -70,6 +72,8 @@
     <Compile Include="Domain\BaseEntity.cs" />
     <Compile Include="Domain\Builder.cs" />
     <Compile Include="Domain\Notification.cs" />
+    <Compile Include="Domain\Invoice.cs" />
+    <Compile Include="Domain\InvoiceItems.cs" />
     <Compile Include="Domain\QouteItems.cs" />
     <Compile Include="Domain\Qoute.cs" />
     <Compile Include="Domain\OrderStatus.cs" />

@@ -32,5 +32,6 @@ namespace BuildersAlliances.Domain
         public int? DoorStyleId { get; set; }
 
         public virtual ICollection<QouteItems> QouteItems { get; set; }
+        public virtual ICollection<OrderItem> OrderItem { get; set; }
     }
 }

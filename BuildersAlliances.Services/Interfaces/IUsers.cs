@@ -22,5 +22,7 @@ namespace BuildersAlliances.Services.Interfaces
         UserInRoleModel AssignRole(int UserId);
 
         bool AssignRole(UserInRoleModel model);
+
+        Users GetUser(int UserId);
     }
 }

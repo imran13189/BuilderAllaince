@@ -39,5 +39,12 @@ namespace BuildersAlliances.CustomModel
 
         public DateTime DeliveryDate { get; set; }
 
+        public bool OrderItemChk
+        {
+            get { return false; }
+            set { }
+        }
+           
+
     }
 }

@@ -40,6 +40,7 @@ namespace BuildersAlliances.WebUI.Infrastructure
             this._kernel.Bind<IBuilder>().To<BuilderService>();
             this._kernel.Bind<ILoginfo>().To<LogInfoServices>();
             this._kernel.Bind<IQoute>().To<QouteService>();
+            this._kernel.Bind<IInvoice>().To<InvoiceService>();
 
 
 

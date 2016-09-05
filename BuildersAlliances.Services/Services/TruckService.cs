@@ -44,10 +44,10 @@ namespace BuildersAlliances.Services
                 uow.SaveChanges();
                 return true;
             }
-            catch (Exception e)
+            catch
             {
 
-                throw e;
+                throw;
             }
         }
         public bool DeleteTruck(int TruckId)
@@ -62,7 +62,7 @@ namespace BuildersAlliances.Services
             catch { return false; }
 
         }
-        public List<TruckModel> GetTrucks(int limit, int offset, string sort, TruckModel model)
+        public IList<TruckModel> GetTrucks(int limit, int offset, string sort, TruckModel model)
         {
             SqlParameter[] param = new SqlParameter[] {
                          new SqlParameter("@offset", offset),
@@ -76,7 +76,7 @@ namespace BuildersAlliances.Services
             return data;
         }
 
-        public List<TruckType> GetTruckType()
+        public IList<TruckType> GetTruckType()
         {
             return uow.Repository<TruckType>().GetAll().ToList();
         }

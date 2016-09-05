@@ -29,7 +29,7 @@ namespace BuildersAlliances.Repository
         private List<LogType> TypesToLog { get; set; }
         public UnityOfWork(DbContext context)
         {
-            _context = context;
+            this._context = context;
         }
 
         public UnityOfWork()
@@ -48,6 +48,12 @@ namespace BuildersAlliances.Repository
             IEfRepository<T> repo = new EfRepository<T>(_context);
             repositories.Add(typeof(T), repo);
             return repo;
+        }
+
+        public void DisableProxy()
+        {
+            this._context.Configuration.LazyLoadingEnabled = false;
+            this._context.Configuration.ProxyCreationEnabled = false;
         }
         public void SaveChanges()
         {

@@ -105,7 +105,7 @@ namespace BuildersAlliances.Services
 
         public List<Builder> GetBuilder(string BuilderName)
         {
-
+            uow.DisableProxy();
             return uow.Repository<Builder>().AsQuerable().Where(x => x.BuilderName.Contains(BuilderName)).ToList();
 
         }

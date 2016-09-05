@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="Interfaces\IInventory.cs" />
     <Compile Include="Interfaces\ILoginfo.cs" />
+    <Compile Include="Interfaces\IInvoice.cs" />
     <Compile Include="Interfaces\IQoute.cs" />
     <Compile Include="Interfaces\IOrder.cs" />
     <Compile Include="Interfaces\IItem.cs" />
@@ -57,6 +58,7 @@
     <Compile Include="Services\InventoryService.cs" />
     <Compile Include="Services\BuilderService.cs" />
     <Compile Include="Services\LogInfoServices.cs" />
+    <Compile Include="Services\InvoiceService.cs" />
     <Compile Include="Services\QouteService.cs" />
     <Compile Include="Services\TruckService.cs" />
     <Compile Include="Services\OrderService.cs" />

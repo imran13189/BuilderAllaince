@@ -13,19 +13,11 @@ namespace BuildersAlliances.Web.Common
             try
             {
                 MailMessage mm = new MailMessage();
-                mm.Subject = "Registration Confirmation";
+                mm.Subject = subject;
                 mm.Body = contents;
                 mm.IsBodyHtml = true;
                 mm.To.Add(To);
                 SmtpClient smtp = new SmtpClient();
-                //smtp.Host = "smtp.gmail.com";
-                //smtp.EnableSsl = true;
-                //string FromEmail = ConfigurationManager.AppSettings["SmtpEmail"];
-                //string Password = ConfigurationManager.AppSettings["SmtpPassword"];
-                //NetworkCredential NetworkCred = new NetworkCredential(FromEmail, Password);
-                //smtp.UseDefaultCredentials = false;
-                //smtp.Credentials = NetworkCred;
-                //smtp.Port = 587;
                 smtp.Send(mm);
                 return "Email sent successfully";
             }

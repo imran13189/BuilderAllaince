@@ -80,5 +80,11 @@ namespace BuildersAlliances.Web.API
         {
            return _item.GetItemByManufacturer(ManufacturerId);
         }
+
+        public decimal GetItemPrice(long ItemId)
+        {
+           return _item.GetItemPrice(ItemId);
+            
+        }
     }
 }

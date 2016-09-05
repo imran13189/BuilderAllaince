@@ -204,6 +204,7 @@
     <Compile Include="Areas\Admin\Controllers\UserController.cs" />
     <Compile Include="Areas\LogInfo\Controllers\LogInfoController.cs" />
     <Compile Include="Areas\LogInfo\LogInfoAreaRegistration.cs" />
+    <Compile Include="Areas\Order\Controllers\InvoiceController.cs" />
     <Compile Include="Areas\Order\Controllers\OrdersController.cs" />
     <Compile Include="Areas\Order\OrderAreaRegistration.cs" />
     <Compile Include="Areas\Qoute\Controllers\QouteController.cs" />
@@ -224,7 +225,7 @@
     <Content Include="App_Readme\Elmah.txt" />
     <Content Include="Areas\Qoute\Views\Qoute\QouteEmailTemplate.cshtml" />
     <Content Include="Areas\Qoute\Views\Qoute\Message.cshtml" />
-    <None Include="Areas\Qoute\Views\Qoute\QouteTemplate.cshtml" />
+    <Content Include="Areas\Qoute\Views\Qoute\QouteTemplate.cshtml" />
     <Content Include="Content\bootstrap-select.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -358,6 +359,7 @@
     <Content Include="Scripts\Custom\DiscountType.js" />
     <Content Include="Scripts\Custom\Inventory.js" />
     <Content Include="Scripts\Custom\InventoryHistory.js" />
+    <Content Include="Scripts\Custom\InvoiceItem.js" />
     <Content Include="Scripts\Custom\ItemQuantityHistory.js" />
     <Content Include="Scripts\Custom\Layout.js" />
     <Content Include="Scripts\Custom\Item.js" />
@@ -365,6 +367,7 @@
     <Content Include="Scripts\Custom\Builder.js" />
     <Content Include="Scripts\Custom\ManufacturerList.js" />
     <Content Include="Scripts\Custom\BuilderOrders.js" />
+    <Content Include="Scripts\Custom\Invoice.js" />
     <Content Include="Scripts\Custom\QouteItem.js" />
     <Content Include="Scripts\Custom\QouteOrder.js" />
     <Content Include="Scripts\Custom\OrderItem.js" />
@@ -470,6 +473,10 @@
     <Content Include="Areas\Qoute\Views\Qoute\AddQouteItem.cshtml" />
     <Content Include="Areas\Qoute\Views\_ViewStart.cshtml" />
     <Content Include="Areas\Qoute\Views\Qoute\QouteItem.cshtml" />
+    <Content Include="Areas\Admin\Views\User\UserProfile.cshtml" />
+    <Content Include="Areas\Order\Views\Invoice\Index.cshtml" />
+    <Content Include="Areas\Order\Views\Invoice\InvoiceItem.cshtml" />
+    <Content Include="Areas\Order\Views\Invoice\InvoiceTemplate.cshtml" />
     <None Include="Properties\PublishProfiles\BuildersAllaince.pubxml" />
     <None Include="Scripts\jquery-2.2.0.intellisense.js" />
     <Content Include="Scripts\Custom\Users.js" />
@@ -488,65 +495,7 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Scripts\js\advanced-datatable\css\demo_page.css" />
-    <Content Include="Scripts\js\advanced-datatable\css\demo_table.css" />
-    <Content Include="Scripts\js\advanced-datatable\css\demo_table_jui.css" />
-    <Content Include="Scripts\js\advanced-datatable\css\jquery.dataTables.css" />
-    <Content Include="Scripts\js\advanced-datatable\css\jquery.dataTables_themeroller.css" />
-    <Content Include="Scripts\js\advanced-datatable\images\back_disabled.png" />
-    <Content Include="Scripts\js\advanced-datatable\images\back_enabled.png" />
-    <Content Include="Scripts\js\advanced-datatable\images\back_enabled_hover.png" />
-    <Content Include="Scripts\js\advanced-datatable\images\favicon.ico" />
-    <Content Include="Scripts\js\advanced-datatable\images\forward_disabled.png" />
-    <Content Include="Scripts\js\advanced-datatable\images\forward_enabled.png" />
-    <Content Include="Scripts\js\advanced-datatable\images\forward_enabled_hover.png" />
-    <Content Include="Scripts\js\advanced-datatable\images\Sorting icons.psd" />
-    <Content Include="Scripts\js\advanced-datatable\images\sort_asc.png" />
-    <Content Include="Scripts\js\advanced-datatable\images\sort_asc_disabled.png" />
-    <Content Include="Scripts\js\advanced-datatable\images\sort_both.png" />
-    <Content Include="Scripts\js\advanced-datatable\images\sort_desc.png" />
-    <Content Include="Scripts\js\advanced-datatable\images\sort_desc_disabled.png" />
-    <Content Include="Scripts\js\advanced-datatable\js\jquery.dataTables.js" />
-    <Content Include="Scripts\js\advanced-datatable\js\jquery.dataTables.min.js" />
-    <Content Include="Scripts\js\advanced-datatable\js\jquery.js" />
-    <Content Include="Scripts\js\advanced-datatable\src\api\api.internal.js" />
-    <Content Include="Scripts\js\advanced-datatable\src\api\api.methods.js" />
-    <Content Include="Scripts\js\advanced-datatable\src\api\api.static.js" />
-    <Content Include="Scripts\js\advanced-datatable\src\core\core.ajax.js" />
-    <Content Include="Scripts\js\advanced-datatable\src\core\core.columns.js" />
-    <Content Include="Scripts\js\advanced-datatable\src\core\core.constructor.js" />
-    <Content Include="Scripts\js\advanced-datatable\src\core\core.data.js" />
-    <Content Include="Scripts\js\advanced-datatable\src\core\core.draw.js" />
-    <Content Include="Scripts\js\advanced-datatable\src\core\core.filter.js" />
-    <Content Include="Scripts\js\advanced-datatable\src\core\core.info.js" />
-    <Content Include="Scripts\js\advanced-datatable\src\core\core.init.js" />
-    <Content Include="Scripts\js\advanced-datatable\src\core\core.length.js" />
-    <Content Include="Scripts\js\advanced-datatable\src\core\core.page.js" />
-    <Content Include="Scripts\js\advanced-datatable\src\core\core.processing.js" />
-    <Content Include="Scripts\js\advanced-datatable\src\core\core.scrolling.js" />
-    <Content Include="Scripts\js\advanced-datatable\src\core\core.sizing.js" />
-    <Content Include="Scripts\js\advanced-datatable\src\core\core.sort.js" />
-    <Content Include="Scripts\js\advanced-datatable\src\core\core.state.js" />
-    <Content Include="Scripts\js\advanced-datatable\src\core\core.support.js" />
-    <Content Include="Scripts\js\advanced-datatable\src\DataTables.js" />
-    <Content Include="Scripts\js\advanced-datatable\src\ext\ext.classes.js" />
-    <Content Include="Scripts\js\advanced-datatable\src\ext\ext.paging.js" />
-    <Content Include="Scripts\js\advanced-datatable\src\ext\ext.sorting.js" />
-    <Content Include="Scripts\js\advanced-datatable\src\ext\ext.types.js" />
-    <Content Include="Scripts\js\advanced-datatable\src\model\model.column.js" />
-    <Content Include="Scripts\js\advanced-datatable\src\model\model.defaults.columns.js" />
-    <Content Include="Scripts\js\advanced-datatable\src\model\model.defaults.js" />
-    <Content Include="Scripts\js\advanced-datatable\src\model\model.ext.js" />
-    <Content Include="Scripts\js\advanced-datatable\src\model\model.row.js" />
-    <Content Include="Scripts\js\advanced-datatable\src\model\model.search.js" />
-    <Content Include="Scripts\js\advanced-datatable\src\model\model.settings.js" />
     <Content Include="Scripts\js\advanced-form.js" />
-    <Content Include="Scripts\js\bootstrap-colorpicker\css\colorpicker.css" />
-    <Content Include="Scripts\js\bootstrap-colorpicker\img\alpha.png" />
-    <Content Include="Scripts\js\bootstrap-colorpicker\img\hue.png" />
-    <Content Include="Scripts\js\bootstrap-colorpicker\img\saturation.png" />
-    <Content Include="Scripts\js\bootstrap-colorpicker\js\bootstrap-colorpicker.js" />
-    <Content Include="Scripts\js\bootstrap-colorpicker\less\colorpicker.less" />
     <Content Include="Scripts\js\bootstrap-datepicker\css\datepicker.css" />
     <Content Include="Scripts\js\bootstrap-datepicker\js\bootstrap-datepicker.js" />
     <Content Include="Scripts\js\bootstrap-datepicker\less\datepicker.less" />
@@ -596,6 +545,7 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <None Include="Scripts\_references.js" />
+    <Content Include="Scripts\URLS.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -648,6 +598,9 @@
       <Project>{b6b2a996-6b8f-491b-bdda-058da7197887}</Project>
       <Name>BuildersAlliances.Services</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

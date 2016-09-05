@@ -4,15 +4,17 @@
     Layout = null;
 }
 <script src="~/Scripts/Custom/OrderItem.js"></script>
+<div class="modal-header">
+    <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+    <h4 class="modal-title">Add items</h4>
+</div>
 <div id="addOrderItem" style="display:none">
     @Html.Action("AddOrderItem", "Orders",new { OrderId=Model.OrderId })
 </div>
 <div class="row">
     <div class="col-sm-12">
         <section class="panel">
-            <header class="panel-heading">
-                Order Items
-            </header>
+          
             <div class="panel-body">
                 <div class="row">
                     <div class="col-lg-2">

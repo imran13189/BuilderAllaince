@@ -18,5 +18,8 @@ namespace BuildersAlliances.Services.Interfaces
 
         List<DoorStyle> GetDoors(int ManufacturerId);
 
+         decimal GetItemPrice(long ItemId);
+        
+
     }
 }

@@ -47,6 +47,9 @@ namespace BuildersAlliances.Repository
         public System.Data.Entity.DbSet<UserInRole> UserInRole { get; set; }
         public System.Data.Entity.DbSet<Qoute> Qoute { get; set; }
         public System.Data.Entity.DbSet<QouteItems> QouteItems { get; set; }
+        public System.Data.Entity.DbSet<Invoice> Invoice { get; set; }
+
+        public System.Data.Entity.DbSet<InvoiceItems> InvoiceItems { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

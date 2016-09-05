@@ -15,7 +15,7 @@ namespace BuildersAlliances.Domain
         public string Address1 { get; set; }
 
 
-    
+        [Required]
         public string Address2 { get; set; }
         public string Address3 { get; set; }
         public string City { get; set; }
@@ -29,7 +29,7 @@ namespace BuildersAlliances.Domain
         public string BuilderName { get; set; }
 
         public ICollection<Qoute> Qoute { get; set; }
-
+        public virtual ICollection<Orders> Orders { get; set; }
 
 
     }

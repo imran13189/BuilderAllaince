@@ -37,10 +37,7 @@ $(document).ready(function () {
             '</a>&nbsp;',
             '<a id="delete" class="remove ml10 isAllowDelete" href="javascript:void(0)" title="Remove">',
                 '<span class="btn btn-danger btn-sm glyphicon glyphicon-remove"></span>',
-            '</a>&nbsp;',
-            '<a id="discount" class="discount ml10 isAllowDelete" href="javascript:void(0)" title="Apply discount">',
-                '<span class="btn btn-success btn-sm glyphicon glyphicon-tasks"></span>',
-            '</a>'
+            '</a>&nbsp;'
         ].join('');
 
 
@@ -61,7 +58,7 @@ $(document).ready(function () {
                 url: $_EditQouteItem,
                 data: row,
                 success: function (data) {
-                 
+                    debugger;
                     $("#addQouteItem").empty();
                     $("#addQouteItem").html(data);
 
@@ -113,22 +110,8 @@ $(document).ready(function () {
                 }]
             });
 
-        },
-        'click .discount': function (e, value, row, index) {
-            
-            $.ajax({
-                type: "POST",
-                url: $_GetManufacturerDiscount,
-                data: { model: row },
-                success: function (data) {
-
-                    $("#Discount").empty();
-                    $("#Discount").html(data);
-                    $(".Discount").modal('show');
-
-                }
-            });
-        },
+        }
+     
     };
     
 
@@ -281,31 +264,23 @@ $(document).ready(function () {
         return e.which !== 32;
     });
 
-    //$("#ManufacturerId").change(function () {
+    $("#ItemId").change(function () {
     
-    //    debugger;
+        debugger;
     
-    //       $.ajax({
-    //           url: $_GetItemByManufacturer,
-    //           type: "GET",
-    //         async:false,
-    //           data: { ManufacturerId: $(this).val() },
-    //                  success:function(result)
-    //                     {
-    //                      debugger;
-    //                      $("#ItemId").empty();
-    //                      $("#ItemId").append("<option value>----Select---</option>")
-    //                         $.each(result,function (i, item) {
-    //                             debugger;
-    //                             $("#ItemId").append("<option value="+item.ItemId+">"+item.ItemName+"</option>")
+           $.ajax({
+               url: $_GetItemPrice,
+               type: "GET",
+          
+               data: { ItemId: $(this).val() },
+          success:function(result){
+                          
+                                $("#Price").val(result);
+                         }
 
-    //                             });
+           });
 
-    //                     }
-
-    //       });
-
-    //});
+    });
 });
 
 $(document).on("change","#ManufacturerId",function () {

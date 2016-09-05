@@ -6,14 +6,14 @@ by editing this MSBuild file. In order to learn more about this please visit htt
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <_PublishTargetUrl>E:\Projects\BuilderPub</_PublishTargetUrl>
+    <_PublishTargetUrl>ftp://ftp.mywindowsHosting.com/site1</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
     <File Include="App_Readme/Elmah.txt">
       <publishTime>04/30/2016 09:35:56</publishTime>
     </File>
     <File Include="Areas/Admin/Views/Builder/AddBuilder.cshtml">
-      <publishTime>06/27/2016 00:39:56</publishTime>
+      <publishTime>07/20/2016 23:27:23</publishTime>
     </File>
     <File Include="Areas/Admin/Views/Builder/BuilderOrders.cshtml">
       <publishTime>06/28/2016 23:54:07</publishTime>
@@ -67,7 +67,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/13/2016 20:01:55</publishTime>
     </File>
     <File Include="Areas/Admin/Views/Manufacturer/AddDiscountType.cshtml">
-      <publishTime>06/01/2016 22:29:26</publishTime>
+      <publishTime>07/21/2016 00:05:32</publishTime>
     </File>
     <File Include="Areas/Admin/Views/Manufacturer/AddDoorStyle.cshtml">
       <publishTime>06/08/2016 23:34:55</publishTime>
@@ -103,7 +103,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/22/2016 00:03:07</publishTime>
     </File>
     <File Include="Areas/Admin/Views/User/AddUser.cshtml">
-      <publishTime>07/14/2016 23:32:20</publishTime>
+      <publishTime>07/19/2016 22:39:20</publishTime>
     </File>
     <File Include="Areas/Admin/Views/User/AssignRole.cshtml">
       <publishTime>07/15/2016 00:49:36</publishTime>
@@ -113,6 +113,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Areas/Admin/Views/User/Index.cshtml">
       <publishTime>07/15/2016 00:22:56</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/User/UserProfile.cshtml">
+      <publishTime>07/20/2016 22:58:27</publishTime>
     </File>
     <File Include="Areas/Admin/Views/User/UserSearch.cshtml">
       <publishTime>07/14/2016 22:47:30</publishTime>
@@ -132,6 +135,15 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Areas/LogInfo/Views/_ViewStart.cshtml">
       <publishTime>05/08/2016 22:52:25</publishTime>
     </File>
+    <File Include="Areas/Order/Views/Invoice/Index.cshtml">
+      <publishTime>08/08/2016 00:49:16</publishTime>
+    </File>
+    <File Include="Areas/Order/Views/Invoice/InvoiceItem.cshtml">
+      <publishTime>08/31/2016 21:20:17</publishTime>
+    </File>
+    <File Include="Areas/Order/Views/Invoice/InvoiceTemplate.cshtml">
+      <publishTime>08/31/2016 21:59:54</publishTime>
+    </File>
     <File Include="Areas/Order/Views/Orders/AddOrder.cshtml">
       <publishTime>07/03/2016 12:45:50</publishTime>
     </File>
@@ -145,10 +157,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/30/2016 23:16:23</publishTime>
     </File>
     <File Include="Areas/Order/Views/Orders/Index.cshtml">
-      <publishTime>07/15/2016 01:37:06</publishTime>
+      <publishTime>08/08/2016 00:46:12</publishTime>
     </File>
     <File Include="Areas/Order/Views/Orders/OrderItem.cshtml">
-      <publishTime>06/09/2016 01:35:28</publishTime>
+      <publishTime>08/08/2016 00:50:35</publishTime>
     </File>
     <File Include="Areas/Order/Views/web.config">
       <publishTime>04/28/2016 21:50:11</publishTime>
@@ -156,20 +168,47 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Areas/Order/Views/_ViewStart.cshtml">
       <publishTime>04/29/2016 21:42:27</publishTime>
     </File>
+    <File Include="Areas/Qoute/Views/Qoute/AddQoute.cshtml">
+      <publishTime>07/20/2016 20:26:45</publishTime>
+    </File>
+    <File Include="Areas/Qoute/Views/Qoute/AddQouteItem.cshtml">
+      <publishTime>07/17/2016 10:37:11</publishTime>
+    </File>
+    <File Include="Areas/Qoute/Views/Qoute/Index.cshtml">
+      <publishTime>07/20/2016 20:31:23</publishTime>
+    </File>
+    <File Include="Areas/Qoute/Views/Qoute/Message.cshtml">
+      <publishTime>07/17/2016 02:32:47</publishTime>
+    </File>
+    <File Include="Areas/Qoute/Views/Qoute/QouteEmailTemplate.cshtml">
+      <publishTime>07/20/2016 23:21:17</publishTime>
+    </File>
+    <File Include="Areas/Qoute/Views/Qoute/QouteItem.cshtml">
+      <publishTime>07/21/2016 23:47:30</publishTime>
+    </File>
+    <File Include="Areas/Qoute/Views/Qoute/QouteTemplate.cshtml">
+      <publishTime>07/30/2016 23:03:14</publishTime>
+    </File>
+    <File Include="Areas/Qoute/Views/web.config">
+      <publishTime>07/16/2016 17:16:24</publishTime>
+    </File>
+    <File Include="Areas/Qoute/Views/_ViewStart.cshtml">
+      <publishTime>07/16/2016 20:40:51</publishTime>
+    </File>
     <File Include="bin/Antlr3.Runtime.dll">
       <publishTime>04/16/2016 00:03:04</publishTime>
     </File>
     <File Include="bin/BuildersAlliances.Entities.dll">
-      <publishTime>07/15/2016 23:09:09</publishTime>
+      <publishTime>08/31/2016 22:43:51</publishTime>
     </File>
     <File Include="bin/BuildersAlliances.Repository.dll">
-      <publishTime>07/15/2016 23:09:10</publishTime>
+      <publishTime>08/31/2016 22:43:52</publishTime>
     </File>
     <File Include="bin/BuildersAlliances.Services.dll">
-      <publishTime>07/15/2016 23:09:10</publishTime>
+      <publishTime>08/31/2016 22:43:52</publishTime>
     </File>
     <File Include="bin/BuildersAlliances.Web.dll">
-      <publishTime>07/15/2016 23:09:13</publishTime>
+      <publishTime>08/31/2016 22:43:56</publishTime>
     </File>
     <File Include="bin/Elmah.dll">
       <publishTime>04/30/2016 09:35:52</publishTime>
@@ -394,7 +433,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/25/2014 23:47:44</publishTime>
     </File>
     <File Include="Content/font-awesome/css/font-awesome.css">
-      <publishTime>12/14/2013 16:23:48</publishTime>
+      <publishTime>07/17/2016 00:27:45</publishTime>
     </File>
     <File Include="Content/font-awesome/css/font-awesome.min.css">
       <publishTime>12/14/2013 16:23:48</publishTime>
@@ -611,6 +650,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Content/images/sm-img-3.jpg">
       <publishTime>12/28/2013 15:04:42</publishTime>
+    </File>
+    <File Include="Content/images/thnks.png">
+      <publishTime>07/17/2016 02:28:06</publishTime>
     </File>
     <File Include="Content/images/top-arrow.png">
       <publishTime>01/12/2014 00:18:56</publishTime>
@@ -834,8 +876,14 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Scripts/Custom/InventoryHistory.js">
       <publishTime>05/01/2016 01:26:01</publishTime>
     </File>
+    <File Include="Scripts/Custom/Invoice.js">
+      <publishTime>07/30/2016 17:22:57</publishTime>
+    </File>
+    <File Include="Scripts/Custom/InvoiceItem.js">
+      <publishTime>08/31/2016 21:54:02</publishTime>
+    </File>
     <File Include="Scripts/Custom/Item.js">
-      <publishTime>06/24/2016 23:35:41</publishTime>
+      <publishTime>07/31/2016 11:52:34</publishTime>
     </File>
     <File Include="Scripts/Custom/ItemQuantityHistory.js">
       <publishTime>04/24/2016 11:17:54</publishTime>
@@ -856,10 +904,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/16/2016 23:30:24</publishTime>
     </File>
     <File Include="Scripts/Custom/Order.js">
-      <publishTime>07/03/2016 12:51:28</publishTime>
+      <publishTime>08/13/2016 23:03:21</publishTime>
     </File>
     <File Include="Scripts/Custom/OrderItem.js">
-      <publishTime>06/13/2016 01:38:46</publishTime>
+      <publishTime>07/20/2016 23:43:22</publishTime>
+    </File>
+    <File Include="Scripts/Custom/QouteItem.js">
+      <publishTime>07/20/2016 23:43:38</publishTime>
+    </File>
+    <File Include="Scripts/Custom/QouteOrder.js">
+      <publishTime>07/21/2016 23:44:11</publishTime>
     </File>
     <File Include="Scripts/Custom/Register.js">
       <publishTime>01/30/2016 17:27:09</publishTime>
@@ -1239,6 +1293,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Scripts/respond.min.js">
       <publishTime>04/17/2015 21:06:47</publishTime>
     </File>
+    <File Include="Scripts/URLS.js">
+      <publishTime>07/20/2016 23:59:05</publishTime>
+    </File>
     <File Include="Views/Account/LockScreen.cshtml">
       <publishTime>05/03/2016 22:40:54</publishTime>
     </File>
@@ -1264,13 +1321,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/18/2016 22:00:21</publishTime>
     </File>
     <File Include="Views/Shared/_Notification.cshtml">
-      <publishTime>06/22/2016 01:59:59</publishTime>
+      <publishTime>07/17/2016 11:35:52</publishTime>
     </File>
     <File Include="Views/Shared/_TempLayout.cshtml">
-      <publishTime>07/15/2016 23:06:52</publishTime>
+      <publishTime>07/30/2016 22:34:46</publishTime>
     </File>
     <File Include="Views/Shared/_UrlVariables.cshtml">
-      <publishTime>07/15/2016 00:20:56</publishTime>
+      <publishTime>08/08/2016 00:22:13</publishTime>
     </File>
     <File Include="Views/Web.config">
       <publishTime>04/18/2016 22:03:39</publishTime>
@@ -1279,7 +1336,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/16/2016 21:00:30</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>07/15/2016 01:41:38</publishTime>
+      <publishTime>08/25/2016 22:04:26</publishTime>
     </File>
   </ItemGroup>
 </Project>

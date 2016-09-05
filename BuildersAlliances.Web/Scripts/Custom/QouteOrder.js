@@ -1,7 +1,7 @@
 ﻿
 $(document).ready(function () {
 
-    $(".sidebar-menu .menu:eq(1) a").addClass("active")
+    $(".sidebar-menu .menu:eq(4) a").addClass("active")
     
 
     $("#addItem").hide();
@@ -81,20 +81,39 @@ $(document).ready(function () {
         },
 
         'click .remove': function (e, value, row, index) {
-      
-            $.ajax({
-                type: "Get",
-                url: $_DeleteQouteItems,
-                data: { QouteId: row.QouteId },
-                success: function (resultdata) {
-                    $("#QouteItems").html(resultdata);
-                    $(".QouteItem").modal('show');
 
-                },
+            BootstrapDialog.show({
+                title: 'Confirmation',
+                message: "Are you sure ?",
+                buttons: [{
+                    label: 'Yes',
+                    cssClass: 'btn-primary',
+                    action: function (dialogItself) {
+                        $.ajax({
+                            type: "Get",
+                            url: $_DeleteQoute,
+                            data: { QouteId: row.QouteId },
+                            success: function (resultdata) {
+                                debugger;
+                                dialogItself.close();
+                                ShowConfirmMessage("Deleted successfully");
+                                RefreshGrid();
 
-                headers: {
-                    'RequestVerificationToken': $("#TokenValue").val()//'@TokenHeaderValue()'
-                }
+
+                            },
+
+                            headers: {
+                                'RequestVerificationToken': $("#TokenValue").val()//'@TokenHeaderValue()'
+                            }
+                        });
+                    }
+                }, {
+                    label: 'No',
+                    cssClass: 'btn-danger',
+                    action: function (dialogItself) {
+                        dialogItself.close();
+                    }
+                }]
             });
 
       
@@ -143,7 +162,7 @@ $(document).ready(function () {
             });
 
 
-            $("#IdQoute").val(row.QouteId);
+           
 
         }
     };
@@ -199,7 +218,7 @@ $(document).ready(function () {
              //,
               {
                   field: 'QouteId',
-                  title: 'Qoute Number',
+                  title: 'Quote Number',
                   checkbox: false,
                   type: 'search',
 
@@ -220,7 +239,11 @@ $(document).ready(function () {
                     field: 'CreatedDate',
                     title: 'Created Date',
                     checkbox: false,
-                    type: 'search'
+                    type: 'search',
+                    formatter: function (value, row, index) {
+                        return new Date(row.CreatedDate).toDateString();
+                        
+                    }
                  
                 }
                  
@@ -229,13 +252,13 @@ $(document).ready(function () {
                  ,
                  {
                      field: 'StatusName',
-                     title: 'Qoute Status',
+                     title: 'Quote Status',
                      formatter: function (value, row, index) {
-                         debugger;
+                    
                          if (row.State == 1)
-                             return "Qoute not send";
+                             return "Quote not send";
                          else if (row.State == 2)
-                             return "Qoute approved";
+                             return "Quote approved";
                          else (row.State == 3)
                              return "Rejected";
                      }
@@ -385,7 +408,8 @@ function SendQoute(qouteId)
         success: function (data) {
             debugger;
             HideLoader();
-            ShowConfirmMessage("Send Successfully");
+            $(".QouteTemplate").modal("hide");
+            ShowConfirmMessage("Qoute sent successfully");
         }
     });
 }

@@ -94,4 +94,32 @@
     $_UsersList = "@Url.HttpRouteUrl("DefaultApi", new { controller="UserAPI",action= "GetUsers" })"
 
 
+    /*-----------------------------Qoute----------------------------------------*/
+
+    $_EditQoute = "@Url.Action("EditQoute", "Qoute", new  { Area= "Qoute" })";
+    // $_AddManufacturer = "@Url.Action("AddQoute", "Qoute")";
+    $_QouteList = "@Url.HttpRouteUrl("DefaultApi", new { controller="QouteAPI",action= "GetQoute" })"
+    $_DeleteQoute = "@Url.Action("DeleteQoute", "Qoute", new { Area = "Qoute" })";
+    $_GetItemByManufacturer = "@Url.HttpRouteUrl("DefaultApi", new { controller="OrderAPI",action= "GetItemByManufacturer" })"
+    $_GetItemPrice = "@Url.HttpRouteUrl("DefaultApi", new { controller="QouteAPI",action= "GetItemPrice" })"
+    $_EditQouteItem = "@Url.Action("EditQouteItem", "Qoute", new  { Area= "Qoute" })";
+
+    $_GetQouteItem = "@Url.Action("QouteItem", "Qoute", new { Area = "Qoute" })";
+    $_GetQouteTemplate = "@Url.Action("QouteTemplate", "Qoute", new { Area = "Qoute" })";
+    $_QouteItem = "@Url.HttpRouteUrl("DefaultApi", new { controller="QouteAPI",action= "GetQouteItem" })"
+    $_GetQouteTemplate = "@Url.Action("QouteTemplate", "Qoute", new { Area = "Qoute" })";
+
+    $_SendQoute = "@Url.Action("SendQoute", "Qoute", new { Area = "Qoute" })";
+
+
+    $_DeleteQouteItem = "@Url.Action("DeleteQouteItem", "Qoute", new { Area = "Qoute" })";
+
+    /*-----------------------------------Invoice------------------------------------------------------*/
+    $_InvoiceItems = "@Url.Action("Index", "Invoice", new  { Area= "Order" })";
+    $_GenerateInvocie = "@Url.Action("GenerateInvoice", "Invoice", new  { Area= "Order" })";
+    $_SentInvoice = "@Url.Action("SendInvoice", "Invoice", new  { Area= "Order" })";
+
+
+
+
 </script>

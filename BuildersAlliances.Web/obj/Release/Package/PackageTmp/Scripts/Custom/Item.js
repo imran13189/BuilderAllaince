@@ -126,7 +126,7 @@ $(document).ready(function () {
             method: 'post',
             url: $_ItemList,
             cache: true,
-            height: 500,
+            height: 529,
             classes: 'table table-hover',
             queryParams: function(param){
                 param.model = {

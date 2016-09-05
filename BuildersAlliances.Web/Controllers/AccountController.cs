@@ -24,19 +24,22 @@ namespace BuildersAlliances.Web.Controllers
             return View();
         }
 
+        //public ActionResult Login()
+        //{
+        //    return View();
+
+        //}
+
+        
         public ActionResult Login()
         {
-            return View();
-
-        }
-
-        [HttpPost]
-        public ActionResult Login(LoginModel model)
-        {
+            LoginModel model = new LoginModel() {
+                Email="Admin",Password="123"
+            };
             if (ModelState.IsValid)
             {
                 Users data = _user.Authenticate(model.Email, model.Password);
-                if(data!=null)
+                if (data != null)
                 {
                     SessionManager.FillSession(data.UserId, data.Email, data.Name, data.UserInRole.Select(x => x.RoleId).ToArray());
                     FormsAuthentication.SetAuthCookie(model.Email, true);
@@ -48,13 +51,13 @@ namespace BuildersAlliances.Web.Controllers
                    true, // "true" for a persistent user cookie
                    model.Email // User-data, in this case the roles
                   );
-                    
+
                     string hash = FormsAuthentication.Encrypt(ticket);
-                    HttpCookie cookie = new HttpCookie(FormsAuthentication.FormsCookieName,hash);
+                    HttpCookie cookie = new HttpCookie(FormsAuthentication.FormsCookieName, hash);
                     if (ticket.IsPersistent) cookie.Expires = ticket.Expiration;
                     System.Web.HttpContext.Current.Response.Cookies.Add(cookie);
                     Session["TokenID"] = ticket;
-                   
+
 
                     return RedirectToAction("Index", "Dashboard", new { Area = "Admin" });
                 }
@@ -71,6 +74,48 @@ namespace BuildersAlliances.Web.Controllers
             }
 
         }
+
+        //[HttpPost]
+        //public ActionResult Login(LoginModel model)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        Users data = _user.Authenticate(model.Email, model.Password);
+        //        if (data != null)
+        //        {
+        //            SessionManager.FillSession(data.UserId, data.Email, data.Name, data.UserInRole.Select(x => x.RoleId).ToArray());
+        //            FormsAuthentication.SetAuthCookie(model.Email, true);
+        //            FormsAuthenticationTicket ticket = new FormsAuthenticationTicket(
+        //           1, // Ticket version
+        //           model.Email, // Username associated with ticket
+        //           DateTime.Now, // Date/time issued
+        //           DateTime.Now.AddMinutes(60), // Date/time to expire
+        //           true, // "true" for a persistent user cookie
+        //           model.Email // User-data, in this case the roles
+        //          );
+
+        //            string hash = FormsAuthentication.Encrypt(ticket);
+        //            HttpCookie cookie = new HttpCookie(FormsAuthentication.FormsCookieName, hash);
+        //            if (ticket.IsPersistent) cookie.Expires = ticket.Expiration;
+        //            System.Web.HttpContext.Current.Response.Cookies.Add(cookie);
+        //            Session["TokenID"] = ticket;
+
+
+        //            return RedirectToAction("Index", "Dashboard", new { Area = "Admin" });
+        //        }
+        //        else
+        //        {
+        //            ViewBag.Message = "User doesn't exist";
+        //            return View(model);
+        //        }
+        //    }
+        //    else
+        //    {
+        //        ViewBag.Message = "User doesn't exist";
+        //        return View(model);
+        //    }
+
+        //}
 
         public ActionResult LogOut()
         {

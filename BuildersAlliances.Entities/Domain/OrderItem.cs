@@ -20,5 +20,8 @@ namespace BuildersAlliances.Domain
 
         public long OrderId { get; set; }
         public DateTime DeliveryDate { get; set; }
+
+        public virtual Orders Orders { get; set; }
+        public virtual Items Items { get; set; }
     }
 }

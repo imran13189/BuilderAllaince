@@ -19,7 +19,8 @@
     <link href="~/Scripts/bootstrap-table.css" rel="stylesheet" />
     <link href="~/Scripts/BootStrapDailog/bootstrap-dialog.min.css" rel="stylesheet" />
     <link href="~/Scripts/js/bootstrap-datepicker/css/datepicker.css" rel="stylesheet" />
-    
+
+    @*<script src="~/Scripts/URLS.js"></script>*@
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]>
@@ -195,12 +196,12 @@
                     </li>
                     <!-- inbox dropdown end -->
                     <!-- notification dropdown start-->
-@if (BuildersAlliances.Common.SessionManager.LoggedInUser.RoleId.Contains(1))
-{
+                @if (BuildersAlliances.Common.SessionManager.LoggedInUser.RoleId.Contains(1))
+                {
                     <li id="header_notification_bar" class="dropdown">
                         @Html.Action("Notification", "Home", new { area = "" })
                         </li>
-}
+                }
                         <!-- notification dropdown end -->
 </ul>
                 <!--  notification end -->
@@ -213,12 +214,12 @@
                     <li class="dropdown">
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                             <img alt="" src="../Content/images/avatar1_small.jpg">
-                            <span class="username">Admin</span>
+                            <span class="username">@BuildersAlliances.Common.SessionManager.LoggedInUser.Name</span>
                             <b class="caret"></b>
                         </a>
                         <ul class="dropdown-menu extended logout">
-                            <li><a href="#"><i class=" fa fa-suitcase"></i>Profile</a></li>
-                            <li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
+                            <li><a href="@Url.Action("UserProfile","User",new  { Area="Admin"})"><i class=" fa fa-suitcase"></i>Profile</a></li>
+                            @*<li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>*@
                             <li><a href="@Url.Action("LogOut","Account", new { Area=""})"><i class="fa fa-key"></i> Log Out</a></li>
                         </ul>
                     </li>
@@ -279,6 +280,14 @@
                                                                           <span>User</span>
                                                                       </a>
                                                                   </li>
+
+
+                                                                <li class="menu">
+                                                                    <a href="@Url.Action("Index", "Qoute", new { Area = "Qoute" })">
+                                                                        <i class="fa fa-dashboard"></i>
+                                                                        <span>Quote</span>
+                                                                    </a>
+                                                                </li>
 
 
                                                               }
@@ -576,7 +585,7 @@
     </section>
 
 
-    <div id="modalLoader" aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="" class="modal fade">
+    <div id="modalLoader" aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1"  class="modal fade">
         <div style="margin-left:44%;margin-top:17%">
         <img src="~/Content/images/loading1.gif" />
             </div>

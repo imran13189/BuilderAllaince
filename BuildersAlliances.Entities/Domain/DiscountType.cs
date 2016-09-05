@@ -15,8 +15,8 @@ namespace BuildersAlliances.Domain
         public string DiscountTypeName { get; set; }
 
         [Required]
-        
-      
+
+        [Range(typeof(decimal), "0.1", "0.99",ErrorMessage ="Multiplier value should be greater than 0 and less than 1")]
         public  decimal Multiplier { get; set; }
         public bool IsDeleted { get; set; }
         public DateTime CreatedDate { get; set; }

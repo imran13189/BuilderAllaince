@@ -227,5 +227,11 @@ namespace BuildersAlliances.Services
                 throw e;
             }
         }
+
+
+        public Users GetUser(int UserId)
+        {
+           return uow.Repository<Users>().Get(x => x.UserId == UserId);
+        }
     }
 }

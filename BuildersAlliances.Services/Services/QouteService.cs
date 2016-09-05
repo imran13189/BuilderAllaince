@@ -9,10 +9,11 @@ using System.Data.SqlClient;
 using BuildersAlliances.Services.Interfaces;
 using BuildersAlliances.CustomModel;
 using BuildersAlliances.Repository;
+using System.Collections.ObjectModel;
 
 namespace BuildersAlliances.Services
 {
-  public  class QouteService:IQoute
+  public  class QouteService:IQoute,IDisposable
     {
         UnityOfWork uow = null;
         public QouteService()
@@ -102,12 +103,9 @@ namespace BuildersAlliances.Services
                 {
                     QouteItems data = uow.Repository<QouteItems>().AsQuerable().FirstOrDefault(x => x.QouteItemId == model.QouteItemId);
                     data.ItemId = model.ItemId;
-
                     data.Quantity = model.Quantity;
-                    
-                   
-                  
                     data.ItemId = model.ItemId;
+                    data.Price = model.Price;
 
                 }
                 uow.SaveChanges();
@@ -158,24 +156,85 @@ namespace BuildersAlliances.Services
 
      public Qoute GetQoute(long QouteId)
         {
-            return uow.Repository<Qoute>().Get(x => x.QouteId == QouteId);
+            try
+            {
+                var model = uow.Repository<Qoute>().Get(x => x.QouteId == QouteId);
+                return model;
+            }
+            catch(Exception e)
+            {
+                throw e;
+            }
         }
 
 
 
         public bool ApproveQoute(long QouteId)
         {
-            Qoute model = uow.Repository<Qoute>().Get(x => x.QouteId == QouteId);
-            model.State = 2;
-            uow.SaveChanges();
-            return true;
+            try
+            {
+                Qoute qoute = uow.Repository<Qoute>().Get(x => x.QouteId == QouteId&&x.State==1);
+                if (qoute == null)
+                {
+                    return false;
+                }
+                else
+                {
+                    qoute.State = 2;
+
+                    //Create Order
+
+                    Orders model = new Orders();
+                    model.BuilderId = qoute.BuilderId;
+                    model.OrderTypeId = 1;
+                    model.CreatedDate = DateTime.UtcNow;
+                    model.OrderStatus = 1;
+                    uow.Repository<Orders>().Add(model);
+                    model.OrderItem = new Collection<OrderItem>();
+                    foreach (QouteItems items in qoute.QouteItems)
+                    {
+                        model.OrderItem.Add(new OrderItem()
+                        {
+                            ItemId = items.ItemId,
+                            ItemStatus = 1,
+                            DeliveryDate = DateTime.UtcNow,
+                            Quantity = items.Quantity,
+
+
+                        });
+                    }
+
+
+                    uow.SaveChanges();
+                    return true;
+                }
+            }
+            catch(Exception e) {
+
+                return false;
+                throw e;
+                
+            }
         }
-    public    bool RejectQoute(long QouteId)
+        public    bool RejectQoute(long QouteId)
         {
-            Qoute model = uow.Repository<Qoute>().Get(x => x.QouteId == QouteId);
-            model.State = 2;
-            uow.SaveChanges();
-            return true;
+            Qoute qoute = uow.Repository<Qoute>().Get(x => x.QouteId == QouteId && x.State == 1);
+            if (qoute != null)
+            {
+                qoute.State = 3;
+
+                uow.SaveChanges();
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public void Dispose()
+        {
+            GC.SuppressFinalize(this);
         }
     }
 }

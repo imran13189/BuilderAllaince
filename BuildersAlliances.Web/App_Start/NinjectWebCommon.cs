@@ -70,6 +70,7 @@ namespace BuildersAlliances.Web.App_Start
             kernel.Bind<IBuilder>().To<BuilderService>();
             kernel.Bind<ILoginfo>().To<LogInfoServices>();
             kernel.Bind<IQoute>().To<QouteService>();
+            kernel.Bind<IInvoice>().To<InvoiceService>();
 
         }        
     }

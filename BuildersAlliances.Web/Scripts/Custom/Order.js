@@ -39,6 +39,10 @@ $(document).ready(function () {
             '</a>&nbsp;',
              '<a id="addItem" class="addItem ml10 isAllowDelete" href="javascript:void(0)" title="Add Item(s) to Order">',
                 '<span class="btn btn-info btn-sm glyphicon glyphicon-plus"></span>',
+            '</a>&nbsp;'
+              ,
+             '<a id="SendQoute" class="createInvoice ml10 isAllowDelete" href="javascript:void(0)" title="Send Invoice">',
+                '<span class="btn btn-success btn-xs">Invoice</span>',
             '</a>'
 
         ].join('');
@@ -61,7 +65,7 @@ $(document).ready(function () {
                 url: $_EditOrder,
                 data: row,
                 success: function (data) {
-                    debugger;
+                    
                     $("#addOrder").empty();
                     $("#addOrder").html(data);
 
@@ -93,43 +97,11 @@ $(document).ready(function () {
                 }
             });
 
-            //BootstrapDialog.show({
-            //    title: 'Confirmation',
-            //    message: "Are you sure ?",
-            //    buttons: [{
-            //        label: 'Yes',
-            //        cssClass: 'btn-primary',
-            //        action: function (dialogItself) {
-            //            $.ajax({
-            //                type: "Get",
-            //                url: $_DeleteOrder,
-            //                data: { OrderId: row.OrderId },
-            //                success: function (resultdata) {
-            //                    debugger;
-            //                    dialogItself.close();
-            //                    ShowConfirmMessage("Deleted successfully");
-            //                    RefreshGrid();
-
-
-            //                },
-
-            //                headers: {
-            //                    'RequestVerificationToken': $("#TokenValue").val()//'@TokenHeaderValue()'
-            //                }
-            //            });
-            //        }
-            //    }, {
-            //        label: 'No',
-            //        cssClass: 'btn-danger',
-            //        action: function (dialogItself) {
-            //            dialogItself.close();
-            //        }
-            //    }]
-            //});
+      
 
         },
         'click .addItem': function (e, value, row, index) {
-            debugger;
+            
             $("#OrderId").val(row.OrderId);
             //$(".OrderItem").modal("show");
 
@@ -138,7 +110,29 @@ $(document).ready(function () {
                 url: $_GetOrderItem,
                 data: { OrderId: row.OrderId },
                 success: function (data) {
-                    debugger;
+                    
+                    $("#OrderItems").empty();
+                    $("#OrderItems").html(data);
+                    $(".OrderItem").modal("show");
+
+                }
+            });
+
+
+            $("#IdOrder").val(row.OrderId);
+
+        },
+        'click .createInvoice': function (e, value, row, index) {
+            
+            $("#OrderId").val(row.OrderId);
+            //$(".OrderItem").modal("show");
+
+            $.ajax({
+                type: "GET",
+                url: $_InvoiceItems,
+               // data: { OrderId: row.OrderId },
+                success: function (data) {
+                    
                     $("#OrderItems").empty();
                     $("#OrderItems").html(data);
                     $(".OrderItem").modal("show");
@@ -151,7 +145,7 @@ $(document).ready(function () {
 
         }
     };
-    debugger;
+    
 
 
     var headers = {};
@@ -232,7 +226,11 @@ $(document).ready(function () {
                     field: 'CreatedDate',
                     title: 'Created Date',
                     checkbox: false,
-                    type: 'search'
+                    type: 'search',
+                    formatter: function (value, row, index) {
+                        return new Date(row.CreatedDate).toDateString();
+
+                    }
                  
                 }
                  
@@ -324,7 +322,7 @@ function Close() {
 }
 
 function AddSuccess(data) {
-    debugger;
+    
     HideLoader();
     RefreshGrid();
     $("#addOrder").hide();
@@ -381,3 +379,4 @@ function AutocompleteInit()
         }
     });
 }
+

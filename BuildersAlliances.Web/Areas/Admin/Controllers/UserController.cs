@@ -7,6 +7,7 @@ using BuildersAlliances.Domain;
 using BuildersAlliances.Services;
 using BuildersAlliances.Services.Interfaces;
 using BuildersAlliances.CustomModel;
+using BuildersAlliances.Common;
 
 namespace BuildersAlliances.Web.Areas.Admin.Controllers
 {
@@ -64,5 +65,13 @@ namespace BuildersAlliances.Web.Areas.Admin.Controllers
         {
             return Json(_user.AssignRole(model));
         }
+
+
+        public ActionResult UserProfile()
+        {
+            
+            return View(_user.GetUser(SessionManager.LoggedInUser.UserID));
+        }
+
     }
 }

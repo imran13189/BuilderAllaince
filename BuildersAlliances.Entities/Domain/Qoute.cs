@@ -25,10 +25,13 @@ namespace BuildersAlliances.Domain
         [NotMapped]
         public string BuilderName { get; set; }
 
+        
+
         public virtual ICollection<QouteItems> QouteItems { get; set; }
 
 
         public virtual Builder Builder { get; set; }
+
 
     }
 }

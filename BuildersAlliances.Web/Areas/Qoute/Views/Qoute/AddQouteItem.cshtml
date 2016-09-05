@@ -43,7 +43,7 @@
                             
                             <div class="col-md-4">
                                 @Html.DropDownList("ManufacturerId", new SelectList((IEnumerable<BuildersAlliances.Domain.Manufacturer>)ViewBag.ManufacturerList,"ManufacturerId","ManufacturerName"),"--Select--" ,new { @class = "form-control col-md-4"})
-                                @Html.ValidationMessage("ManufacturerId", "", new { @class = "error" })
+                                @*@Html.ValidationMessage("ManufacturerId", "", new { @class = "error" })*@
                             </div>
 
                             <div class="col-md-4">

@@ -30,5 +30,9 @@ namespace BuildersAlliances.Domain
         public int BuilderId { get; set; }
         [NotMapped]
         public string BuilderName { get; set; }
+
+        public virtual Builder Builder { get; set; }
+
+        public virtual ICollection<OrderItem> OrderItem { get; set; }
     }
 }

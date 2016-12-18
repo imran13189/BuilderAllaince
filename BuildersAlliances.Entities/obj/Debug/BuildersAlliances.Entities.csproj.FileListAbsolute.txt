@@ -12,3 +12,4 @@ E:\Projects\BuilderAlliance\BuildersAlliances.Entities\bin\Debug\BuildersAllianc
 E:\Projects\BuilderAlliance\BuildersAlliances.Entities\bin\Debug\BuildersAlliances.Entities.pdb
 E:\Projects\BuilderAlliance\BuildersAlliances.Entities\obj\Debug\BuildersAlliances.Entities.dll
 E:\Projects\BuilderAlliance\BuildersAlliances.Entities\obj\Debug\BuildersAlliances.Entities.pdb
+E:\Projects\BuilderAlliance\BuildersAlliances.Entities\obj\Debug\BuildersAlliances.Entities.csprojResolveAssemblyReference.cache

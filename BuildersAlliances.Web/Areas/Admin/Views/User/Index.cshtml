@@ -1,0 +1,65 @@
+﻿
+<script src="~/Scripts/Custom/Users.js"></script>
+
+<div id="searchUser" style="display:none">
+    @Html.Partial("UserSearch")
+</div>
+
+<div id="addUser" style="display:none">
+    @Html.Partial("AddUser")
+</div>
+<div class="row">
+    <div class="col-sm-12">
+        <section class="panel">
+            <header class="panel-heading">
+                User
+            </header>
+            <div class="panel-body">
+                <div class="row">
+                    
+
+                    
+
+                    <div class="col-lg-2">
+                        <button class="btn btn-primary" id="btnAdvanceSearch" >Search User</button>
+                    </div>
+
+                    <div class="col-lg-2 pull-right">
+
+                        <input type="button" id="btnAdd" class="btn btn-info" value="Add User">
+                    </div>
+
+                </div>
+
+                <table class="table table-hover" data-show-columns="true" data-sort-name="UserId" data-show-filter="true" data-click-to-select="true"
+                       id="grid">
+                    <thead>
+
+                    </thead>
+                </table>
+
+
+            </div>
+        </section>
+    </div>
+</div>
+
+
+<div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" class="modal fade assignrole">
+    <div class="modal-dialog" style="width:70%">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+                <h4 class="modal-title">Add items</h4>
+            </div>
+
+
+
+            <div id="assignrole">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+

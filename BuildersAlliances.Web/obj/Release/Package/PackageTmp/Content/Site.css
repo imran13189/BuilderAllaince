@@ -40,3 +40,27 @@
         /* add padding to account for vertical scrollbar */
         padding-right: 20px;
     }
+
+    .sidebar-toggle-box
+    {
+        display:none;
+    }
+
+     /*.fixed-table-body {
+
+    overflow-x: auto;
+
+    overflow-y: auto;
+
+    height: auto; /*  before 100%*/*/
+
+}
+
+
+    @media(max-width:758px)
+    {
+         .sidebar-toggle-box
+         {
+          display:block;
+         }
+    }

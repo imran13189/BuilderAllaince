@@ -1,0 +1,139 @@
+﻿@model BuildersAlliances.Domain.Qoute
+
+@{
+    Layout=null;
+    
+    decimal total = Model.QouteItems.Sum(x => x.Quantity * x.Price);
+ 
+}
+
+<link href="http://sipaz13-001-site1.ftempurl.com/Content/bs3/css/bootstrap.min.css" rel="stylesheet" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;">
+
+<link href="http://sipaz13-001-site1.ftempurl.com/Content/css/bootstrap-reset.css" rel="stylesheet" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;">
+<link href="http://sipaz13-001-site1.ftempurl.com/font-awesome/css/font-awesome.css" rel="stylesheet" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;">
+<link href="~/Content/Site.css" rel="stylesheet" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;">
+<link href="http://sipaz13-001-site1.ftempurl.com/Content/css/style.css" rel="stylesheet" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;">
+
+
+<div class="row" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;margin-left: -15px;margin-right: -15px;">
+    <div class="col-md-12" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;position: relative;min-height: 1px;padding-left: 15px;padding-right: 15px;width: 100%;">
+        <section class="panel" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;display: block;margin-bottom: 20px;background-color: #fff;border: none;border-radius: 4px;-webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);box-shadow: none;">
+            <div class="panel-body invoice" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;padding: 15px;">
+                <div class="invoice-header" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;border: 1px solid #ddd;display: inline-block;width: 99%;margin-bottom: 40px;">
+                    <div class="invoice-title col-md-3 col-xs-2" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;position: relative;min-height: 1px;padding-left: 15px;padding-right: 15px;float: left;width: 25%;background: #1fb5ad;color: #fff;display: inline-block;padding: 20px;">
+                        <h1 style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;font-size: 50px;margin: 0;font-family: inherit;font-weight: lighter;line-height: 1.1;color: inherit;margin-top: 20px;margin-bottom: 10px;text-align: center;text-transform: uppercase;padding: 5px;letter-spacing: 2px;">Quote</h1>
+                        
+                    </div>
+                    <div class="invoice-info col-md-9 col-xs-10" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;position: relative;min-height: 1px;padding-left: 15px;padding-right: 15px;float: left;width: 60%;padding: 20px;margin-top: 5px;">
+
+                        <div class="pull-right" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;float: right!important;">
+                            <div class="col-md-6 col-sm-6 pull-left" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;position: relative;min-height: 1px;padding-left: 15px;padding-right: 15px;width: 35%;float: left!important;">
+                                <p style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;orphans: 3;widows: 3;margin: 0 0 10px;color: #aeaeb1;margin-bottom: 0;">
+                                    121 King Street, Melbourne <br style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;">
+                                    Victoria 3000 Australia
+                                </p>
+                            </div>
+                            <div class="col-md-6 col-sm-6 pull-right" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;position: relative;min-height: 1px;padding-left: 15px;padding-right: 15px;width: 35%;float: right!important;">
+                                <p style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;orphans: 3;widows: 3;margin: 0 0 10px;color: #aeaeb1;margin-bottom: 0;">
+                                    Phone: +61 3 8376 6284 <br style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;">
+                                    Email : info@envato.com
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row invoice-to" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;margin-left: -15px;margin-right: -15px;">
+                    <div class="col-md-4 col-sm-4 pull-left" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;position: relative;min-height: 1px;padding-left: 15px;padding-right: 15px;width: 33.33333333333333%;float: left!important;margin-bottom:5%;">
+                        <h4 style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;font-family: inherit;font-weight: 500;line-height: 1.1;color: inherit;margin-top: 10px;margin-bottom: 10px;font-size: 18px;">Quote To:</h4>
+                        <h2 style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;orphans: 3;widows: 3;page-break-after: avoid;font-family: inherit;font-weight: 600;line-height: 1.1;color: #73737b;margin-top: 20px;margin-bottom: 10px;font-size: 24px;margin: 0;">@Model.Builder.BuilderName</h2>
+                        <p style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;orphans: 3;widows: 3;margin: 0 0 10px;color: #aeaeb1;margin-bottom: 0;">
+                            @Model.Builder.Address1<br style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;">
+                            @Model.Builder.Address2<br style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;">
+                            Phone: @Model.Builder.Phone<br style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;">
+                            Email :@Model.Builder.Email
+                        </p>
+                    </div>
+                    <div class="col-md-4 col-sm-5 pull-right" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;position: relative;min-height: 1px;padding-left: 15px;padding-right: 15px;width: 33.33333333333333%;float: right!important;">
+                        <div class="row" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;margin-left: -15px;margin-right: -15px;">
+                            <div class="col-md-4 col-sm-5 inv-label" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;position: relative;min-height: 1px;padding-left: 15px;padding-right: 15px;width: 33.33333333333333%;color: #1fb5ad;">Quote #</div>
+                            <div class="col-md-8 col-sm-7" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;position: relative;min-height: 1px;padding-left: 15px;padding-right: 15px;width: 66.66666666666666%;">@Model.QouteId</div>
+                        </div>
+                        <br style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;">
+                        <div class="row" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;margin-left: -15px;margin-right: -15px;">
+                            <div class="col-md-4 col-sm-5 inv-label" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;position: relative;min-height: 1px;padding-left: 15px;padding-right: 15px;width: 33.33333333333333%;color: #1fb5ad;">Date #</div>
+                            <div class="col-md-8 col-sm-7" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;position: relative;min-height: 1px;padding-left: 15px;padding-right: 15px;width: 66.66666666666666%;">@Model.CreatedDate.ToString("dd MMM yyyy")</div>
+                        </div>
+                        <br style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;">
+                        @*<div class="row" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;margin-left: -15px;margin-right: -15px;">
+                            <div class="col-md-12 inv-label" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;position: relative;min-height: 1px;padding-left: 15px;padding-right: 15px;width: 100%;color: #1fb5ad;">
+                                <h3 style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;orphans: 3;widows: 3;page-break-after: avoid;font-family: inherit;font-weight: 300;line-height: 1.1;color: inherit;margin-top: 20px;margin-bottom: 10px;font-size: 24px;">TOTAL DUE</h3>
+                            </div>
+                            <div class="col-md-12" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;position: relative;min-height: 1px;padding-left: 15px;padding-right: 15px;width: 100%;">
+                                <h1 class="amnt-value" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;font-size: 36px;margin: 0;font-family: inherit;font-weight: 400;line-height: 1.1;color: inherit;margin-top: 20px;margin-bottom: 10px;">$@(Model.QouteItems.Sum(x => x.Quantity * x.Price))</h1>
+                            </div>
+                        </div>*@
+
+
+                    </div>
+                </div>
+                <table class="table table-invoice" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;border-collapse: collapse!important;border-spacing: 5px;max-width: 100%;background-color: transparent;width: 100%;margin-bottom: 20px;margin-top: 30px;">
+                    <thead style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;display: table-header-group;">
+                        <tr style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;page-break-inside: avoid;">
+                            <th style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;padding: 10px;text-align: center;line-height: 1.428571429;vertical-align: middle;border-top: 1px solid #ddd;border-bottom: none;background: #e8e9f0;border-radius: 5px;-webkit-border-radius: 5px;background-color: #fff!important;">#</th>
+                            <th style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;padding: 10px;text-align: left;line-height: 1.428571429;vertical-align: middle;border-top: 1px solid #ddd;border-bottom: none;background: #e8e9f0;border-radius: 5px;-webkit-border-radius: 5px;background-color: #fff!important;">Item Description</th>
+                            <th class="text-center" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;padding: 10px;text-align: center;line-height: 1.428571429;vertical-align: middle;border-top: 1px solid #ddd;border-bottom: none;background: #e8e9f0;border-radius: 5px;-webkit-border-radius: 5px;background-color: #fff!important;">Price</th>
+                            <th class="text-center" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;padding: 10px;text-align: center;line-height: 1.428571429;vertical-align: middle;border-top: 1px solid #ddd;border-bottom: none;background: #e8e9f0;border-radius: 5px;-webkit-border-radius: 5px;background-color: #fff!important;">Quantity</th>
+                            <th class="text-center" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;padding: 10px;text-align: center;line-height: 1.428571429;vertical-align: middle;border-top: 1px solid #ddd;border-bottom: none;background: #e8e9f0;border-radius: 5px;-webkit-border-radius: 5px;background-color: #fff!important;">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;">
+                        @foreach (var item in Model.QouteItems)
+                        {
+
+                        <tr style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;page-break-inside: avoid;">
+                            <td style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;padding: 10px;line-height: 1.428571429;vertical-align: middle;border-top: none;background: #f5f6f9;border-radius: 5px;-webkit-border-radius: 5px;text-align: center;background-color: #fff!important;">1</td>
+                            <td style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;padding: 10px;line-height: 1.428571429;vertical-align: middle;border-top: none;background: #f5f6f9;border-radius: 5px;-webkit-border-radius: 5px;background-color: #fff!important;">
+                                <h4 style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;font-family: inherit;font-weight: 400;line-height: 1.1;color: inherit;margin-top: 10px;margin-bottom: 10px;font-size: 18px;margin: 0;">@item.Items.ItemName</h4>
+                                <p style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;orphans: 3;widows: 3;margin: 0 0 10px;color: #aeaeb1;margin-bottom: 0;">@item.Items.ItemSKU</p>
+                            </td>
+                            <td class="text-center" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;padding: 10px;text-align: center;line-height: 1.428571429;vertical-align: middle;border-top: none;background: #f5f6f9;border-radius: 5px;-webkit-border-radius: 5px;background-color: #fff!important;">@item.Price</td>
+                            <td class="text-center" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;padding: 10px;text-align: center;line-height: 1.428571429;vertical-align: middle;border-top: none;background: #f5f6f9;border-radius: 5px;-webkit-border-radius: 5px;background-color: #fff!important;">@item.Quantity</td>
+                            <td class="text-center" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;padding: 10px;text-align: center;line-height: 1.428571429;vertical-align: middle;border-top: none;background: #f5f6f9;border-radius: 5px;-webkit-border-radius: 5px;background-color: #fff!important;">@(item.Price*item.Quantity)</td>
+                        </tr>
+                        }
+
+                    </tbody>
+                </table>
+                <div class="row" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;margin-left: -15px;margin-right: -15px;">
+                    <div class="col-md-8 col-xs-7 payment-method" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;position: relative;min-height: 1px;padding-left: 15px;padding-right: 15px;float: left;width:47%;">
+                        @*<h4 style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;font-family: inherit;font-weight: 500;line-height: 1.1;color: inherit;margin-top: 10px;margin-bottom: 10px;font-size: 18px;">Payment Method</h4>
+                        <p style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;orphans: 3;widows: 3;margin: 0 0 10px;color: #aeaeb1;margin-bottom: 0;">1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;orphans: 3;widows: 3;margin: 0 0 10px;color: #aeaeb1;margin-bottom: 0;">2. Pellentesque tincidunt pulvinar magna quis rhoncus.</p>
+                        <p style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;orphans: 3;widows: 3;margin: 0 0 10px;color: #aeaeb1;margin-bottom: 0;">3. Cras rhoncus risus vitae congue commodo.</p>
+                        <br style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;">*@
+                        <h3 class="inv-label itatic" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;orphans: 3;widows: 3;page-break-after: avoid;font-family: inherit;font-weight: 500;line-height: 1.1;color: #1fb5ad;margin-top: 20px;margin-bottom: 10px;font-size: 24px;font-style: italic;">Thank you for your business</h3>
+                    </div>
+                    <div class="col-md-4 col-xs-5 invoice-block pull-right" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;position: relative;min-height: 1px;padding-left: 15px;padding-right: 15px;float: right!important;width: 40%;text-align: right;">
+                        <ul class="unstyled amounts" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;margin-top: 0;margin-bottom: 10px;padding-left: 30px;">
+                            @*<li style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;background: #f5f6f9;margin-bottom: 5px;padding: 10px;border-radius: 4px;-webkit-border-radius: 4px;font-weight: 300;font-size: 16px;list-style: none;">Sub - Total amount : $@(Model.QouteItems.Sum(x => x.Quantity * x.Price))</li>*@
+                          
+                          
+                            <li class="grand-total" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;background: #1fb5ad;margin-bottom: 5px;padding: 10px;border-radius: 4px;-webkit-border-radius: 4px;font-weight: bold;font-size: 16px;list-style: none;color: #fff;">Grand Total : $@total</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="text-center invoice-btn" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;text-align: center;margin-top: 30px;">
+                    <a class="btn btn-success btn-lg" href="@Url.Action("ApproveQoute","Qoute", new {Area="Qoute",Id=Model.QouteId },Request.Url.Scheme)" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;background: 0 0;color: #FFFFFF;text-decoration: none;outline: none;display: inline-block;margin-bottom: 0;font-weight: 300;text-align: center;vertical-align: middle;cursor: pointer;background-image: none;border: 1px solid transparent;white-space: nowrap;padding: 10px 16px;font-size: 16px;line-height: 1.33;border-radius: 6px;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;-o-user-select: none;user-select: none;background-color: #95b75d;border-color: #95b75d;margin: 0 5px;"><i class="fa fa-check" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;"></i>Approve</a>
+                    <a href="@Url.Action("RejectQoute","Qoute", new {Area="Qoute",Id=Model.QouteId },Request.Url.Scheme)" target="_blank" class="btn btn-primary btn-lg" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;background: 0 0;color: #FFFFFF;text-decoration: none;outline: none;display: inline-block;margin-bottom: 0;font-weight: 300;text-align: center;vertical-align: middle;cursor: pointer;background-image: none;border: 1px solid transparent;white-space: nowrap;padding: 10px 16px;font-size: 16px;line-height: 1.33;border-radius: 6px;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;-o-user-select: none;user-select: none;background-color: #1fb5ad;border-color: #1fb5ad;margin: 0 5px;"><i class="fa fa-print" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;"></i> Reject </a>
+                </div>
+
+            </div>
+        </section>
+    </div>
+</div>
+
+
+
+

@@ -1,0 +1,58 @@
+﻿@model BuildersAlliances.CustomModel.UserInRoleModel
+
+@{
+    Layout = null;
+}
+
+
+
+<div class="row">
+
+
+    <div class="col-lg-12">
+        <section class="panel">
+
+            <div class="panel-body">
+
+@using (Ajax.BeginForm("AssignRole", "User", new AjaxOptions { HttpMethod = "POST", OnSuccess = "AddSuccess", OnBegin = "ShowLoader" }, new { @class = "form-horizontal", @id = "signupaForm" }))
+{
+                <table class="table  table-hover general-table">
+                    <thead>
+                        <tr>
+
+                            <td>Role Name</td>
+                            
+                            <td>Select</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        @for (int i = 0; i < Model.model.Count; i++)
+                        {
+                            <tr>
+
+                                <td>@Model.model[i].RoleName</td>
+                                @*@Html.HiddenFor(x => x.model[i].RoleId)*@
+                                @Html.Hidden("model.model["+i+"].RoleId",Model.model[i].RoleId)
+                                @*<td class="Multiplier">@Html.CheckBoxFor(x => x.model[i].IsChecked)</td>*@
+                                <td class="Multiplier">@Html.CheckBox("model.model[" + i+"].IsChecked",Model.model[i].IsChecked)</td>
+                                
+
+                            </tr>
+
+                        }
+                       
+
+                    </tbody>
+
+                </table>
+                @Html.Hidden("model.UserId", Model.UserId)
+                <input type="submit"  value="Assign" />
+}
+            </div>
+        </section>
+    </div>
+
+
+
+</div>

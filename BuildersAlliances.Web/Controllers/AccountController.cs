@@ -30,11 +30,13 @@ namespace BuildersAlliances.Web.Controllers
 
         //}
 
-        
+
         public ActionResult Login()
         {
-            LoginModel model = new LoginModel() {
-                Email="Admin",Password="123"
+            LoginModel model = new LoginModel()
+            {
+                Email = "Admin",
+                Password = "123"
             };
             if (ModelState.IsValid)
             {
@@ -75,7 +77,7 @@ namespace BuildersAlliances.Web.Controllers
 
         }
 
-        //[HttpPost]
+        [HttpPost]
         //public ActionResult Login(LoginModel model)
         //{
         //    if (ModelState.IsValid)

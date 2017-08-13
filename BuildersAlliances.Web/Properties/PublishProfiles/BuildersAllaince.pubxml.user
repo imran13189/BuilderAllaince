@@ -6,7 +6,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <_PublishTargetUrl>ftp://ftp.mywindowsHosting.com/site1</_PublishTargetUrl>
+    <_PublishTargetUrl>E:\Projects\BuilderPub</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
     <File Include="App_Readme/Elmah.txt">
@@ -199,16 +199,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/16/2016 00:03:04</publishTime>
     </File>
     <File Include="bin/BuildersAlliances.Entities.dll">
-      <publishTime>08/31/2016 22:43:51</publishTime>
+      <publishTime>02/02/2017 23:38:58</publishTime>
     </File>
     <File Include="bin/BuildersAlliances.Repository.dll">
-      <publishTime>08/31/2016 22:43:52</publishTime>
+      <publishTime>02/02/2017 23:38:59</publishTime>
     </File>
     <File Include="bin/BuildersAlliances.Services.dll">
-      <publishTime>08/31/2016 22:43:52</publishTime>
+      <publishTime>02/02/2017 23:39:00</publishTime>
     </File>
     <File Include="bin/BuildersAlliances.Web.dll">
-      <publishTime>08/31/2016 22:43:56</publishTime>
+      <publishTime>02/02/2017 23:39:06</publishTime>
     </File>
     <File Include="bin/Elmah.dll">
       <publishTime>04/30/2016 09:35:52</publishTime>
@@ -667,10 +667,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/04/2014 16:18:22</publishTime>
     </File>
     <File Include="Content/jquery-ui.css">
-      <publishTime>07/03/2016 23:19:09</publishTime>
+      <publishTime>09/03/2016 11:53:30</publishTime>
     </File>
     <File Include="Content/Site.css">
-      <publishTime>07/03/2016 01:12:52</publishTime>
+      <publishTime>09/03/2016 12:30:32</publishTime>
     </File>
     <File Include="Content/themes/base/accordion.css">
       <publishTime>07/03/2016 14:06:01</publishTime>
@@ -880,7 +880,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/30/2016 17:22:57</publishTime>
     </File>
     <File Include="Scripts/Custom/InvoiceItem.js">
-      <publishTime>08/31/2016 21:54:02</publishTime>
+      <publishTime>09/03/2016 13:07:37</publishTime>
     </File>
     <File Include="Scripts/Custom/Item.js">
       <publishTime>07/31/2016 11:52:34</publishTime>
@@ -1324,7 +1324,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/17/2016 11:35:52</publishTime>
     </File>
     <File Include="Views/Shared/_TempLayout.cshtml">
-      <publishTime>07/30/2016 22:34:46</publishTime>
+      <publishTime>09/03/2016 13:36:37</publishTime>
     </File>
     <File Include="Views/Shared/_UrlVariables.cshtml">
       <publishTime>08/08/2016 00:22:13</publishTime>
@@ -1336,7 +1336,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/16/2016 21:00:30</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>08/25/2016 22:04:26</publishTime>
+      <publishTime>02/02/2017 23:39:58</publishTime>
     </File>
   </ItemGroup>
 </Project>

@@ -56,7 +56,7 @@ namespace BuildersAlliances.Services
             try
             {
                 Email = Email.ToLower();
-                Users data= uow.Repository<Users>().Get(x => x.Username.ToLower() == Email && x.Password == Password);
+                Users data= uow.Repository<Users>().Get(x => (x.Username.ToLower() == Email||x.Email==Email) && x.Password == Password);
                 return data;
             }
             catch(Exception e)
